@@ -71,17 +71,36 @@ let currentTransform = d3.zoomIdentity;
 
 function positionTooltip(t) {
     if (!activeBattle) return;
+
     const pt = t.apply(activeBattle.__p);
+
+    if (
+        pt[0] < 0 ||
+        pt[0] > width ||
+        pt[1] < 0 ||
+        pt[1] > height
+    ) {
+        tooltip.style("display", "none");
+        return;
+    }
+
+    tooltip.style("display", "block");
+
     const node = tooltip.node();
     const tw = node.offsetWidth;
     const th = node.offsetHeight;
+
     let x = pt[0] + 14;
     let y = pt[1] + 14;
+
     if (x + tw > width - 8) x = pt[0] - tw - 14;
     if (y + th > height - 8) y = height - th - 8;
     if (x < 8) x = 8;
     if (y < 8) y = 8;
-    tooltip.style("left", x + "px").style("top", y + "px");
+
+    tooltip
+        .style("left", x + "px")
+        .style("top", y + "px");
 }
 
 function updateOverlay(t) {
@@ -227,16 +246,34 @@ Promise.all([
             .attr("r", 5)
             .on("click", (event, b) => {
                 event.stopPropagation();
+
+                if (activeBattle === b) {
+                    activeBattle = null;
+                    tooltip.style("display", "none");
+                    return;
+                }
+
                 activeBattle = b;
+
                 tooltip
                     .style("display", "block")
-                    .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div>${b.summary}`);
+                    .html(`
+                        <span id="tt-close">×</span>
+                        <h3>${b.name}</h3>
+                        <div class="dates">${b.dates}</div>
+                        ${b.summary}
+                    `);
+
                 const k = 5;
+
                 svg.transition()
                     .duration(750)
                     .call(
                         zoom.transform,
-                        d3.zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-b.__p[0], -b.__p[1])
+                        d3.zoomIdentity
+                            .translate(width / 2, height / 2)
+                            .scale(k)
+                            .translate(-b.__p[0], -b.__p[1])
                     );
             });
 
