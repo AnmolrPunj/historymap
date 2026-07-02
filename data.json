@@ -1,0 +1,42 @@
+[
+    {
+        "id": "shanghai",
+        "name": "Battle of Shanghai",
+        "dates": "13 August – 26 November 1937",
+        "lat": 31.23,
+        "lng": 121.47,
+        "summary": "The first major battle of the Second Sino-Japanese War. Chiang Kai-shek committed his best-trained divisions to defend the city, adopting a strategy of trading space for time against a superior Japanese military. After three months of brutal urban fighting, Japanese forces took the city at a cost of roughly 60,000 Japanese casualties against approximately 250,000 Chinese and the surviving Chinese forces withdrew toward Nanjing."
+    },
+    {
+        "id": "nanjing",
+        "name": "Fall of Nanjing & Nanjing Massacre",
+        "dates": "1–13 December 1937; massacre continued ~6 weeks",
+        "lat": 32.06,
+        "lng": 118.80,
+        "summary": "After Shanghai fell, Japanese forces advanced on the Chinese capital of Nanjing, taking the city on 13 December 1937 after a comparatively brief battle. What followed defined the event: over roughly six weeks, Japanese troops carried out mass executions of prisoners of war and civilians alongside widespread sexual violence, killing an estimated 200,000–300,000 people in one of the worst atrocities of the twentieth century."
+    },
+    {
+    "id": "battle-of-france",
+    "name": "Battle of France",
+    "dates": "10 May – 22 June 1940",
+    "lat": 49.70,
+    "lng": 4.94,
+    "summary": "Germany launched Case Yellow on 10 May 1940, rapidly overwhelming Allied forces through Blitzkrieg tactics and a surprise advance through the Ardennes. The campaign resulted in the fall of France, the evacuation at Dunkirk, and left Britain standing alone against Nazi Germany."
+    },
+    {
+    "id": "dunkirk",
+    "name": "Evacuation of Dunkirk (Operation Dynamo)",
+    "dates": "26 May – 4 June 1940",
+    "lat": 51.03,
+    "lng": 2.38,
+    "summary": "As Allied forces became trapped on the beaches of Dunkirk, Britain launched Operation Dynamo to evacuate them across the English Channel. Over 338,000 British and French troops escaped, preserving Britain's army despite abandoning most of its equipment."
+    },
+    {
+    "id": "battle-of-britain",
+    "name": "Battle of Britain",
+    "dates": "10 July – 31 October 1940",
+    "lat": 51.25,
+    "lng": 0.50,
+    "summary": "Following the fall of France, Germany sought to destroy the Royal Air Force before launching Operation Sea Lion, the planned invasion of Britain. Despite being heavily outnumbered, the RAF successfully defended British skies, forcing Hitler to postpone the invasion indefinitely and marking Germany's first major defeat of the war."
+    }
+]

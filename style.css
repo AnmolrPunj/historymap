@@ -4,6 +4,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: fixed;
 }
 
 * {
@@ -17,13 +18,100 @@ body {
 }
 
 #map-svg {
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: block;
+    shape-rendering: crispEdges;
+}
+
+html {
+    touch-action: none;
 }
 
 .land {
-    fill: #e8e2d0;
     stroke: #2e4054;
-    stroke-width: 0.6;
+    stroke-width: 0.4;
+    shape-rendering: geometricPrecision;
+}
+
+.lake {
+    fill: #2e4054;
+    stroke: none;
+    pointer-events: none;
+}
+
+.river {
+    fill: none;
+    stroke: #2e4054;
+    stroke-width: 0.5;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+}
+
+.country-label {
+    fill: #8a8471;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-anchor: middle;
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-rendering: geometricPrecision;
+}
+
+.city {
+    fill: #1a1a16;
+    pointer-events: none;
+}
+
+.city-label {
+    fill: #3a392f;
+    font-family: Georgia, serif;
+    font-size: 8px;
+    pointer-events: none;
+    text-rendering: geometricPrecision;
+}
+
+.battle {
+    fill: #8b3a3a;
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+
+#tooltip {
+    position: fixed;
+    display: none;
+    max-width: 280px;
+    background: #e8e2d0;
+    color: #1a1a16;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.4;
+    pointer-events: auto;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#tooltip h3 {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+}
+
+#tooltip .dates {
+    font-size: 11px;
+    color: #6b6555;
+    margin-bottom: 6px;
+}
+
+#tt-close {
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
 }
