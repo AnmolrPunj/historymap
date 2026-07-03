@@ -24,7 +24,6 @@ body {
     width: 100vw;
     height: 100vh;
     display: block;
-    shape-rendering: crispEdges;
 }
 
 html {
@@ -46,20 +45,27 @@ html {
 .river {
     fill: none;
     stroke: #2e4054;
-    stroke-width: 0.5;
-    vector-effect: non-scaling-stroke;
+    stroke-width: 0.3;
     pointer-events: none;
 }
 
+.map-layer {
+    will-change: transform;
+}
+
 .country-label {
-    fill: #8a8471;
+    fill: #4a4535;
     font-family: Georgia, serif;
-    font-size: 9px;
+    font-weight: bold;
     text-anchor: middle;
     pointer-events: none;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-rendering: geometricPrecision;
+    paint-order: stroke;
+    stroke: #e8e2d0;
+    stroke-width: 3px;
+    stroke-linejoin: round;
 }
 
 .city {
@@ -70,9 +76,13 @@ html {
 .city-label {
     fill: #3a392f;
     font-family: Georgia, serif;
-    font-size: 8px;
+    font-style: italic;
     pointer-events: none;
     text-rendering: geometricPrecision;
+    paint-order: stroke;
+    stroke: #e8e2d0;
+    stroke-width: 2px;
+    stroke-linejoin: round;
 }
 
 .battle {
