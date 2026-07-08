@@ -86,9 +86,9 @@ html {
 }
 
 .battle {
-    fill: #c23b3b;
+    fill: #740707;
     stroke: #ffffff;
-    stroke-width: 2.5px;
+    stroke-width: 0.5px;
     cursor: pointer;
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
