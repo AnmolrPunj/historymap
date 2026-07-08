@@ -1,5 +1,37 @@
 const svg = d3.select("#map-svg");
 const tooltip = d3.select("#tooltip");
+const onboarding = d3.select("#onboarding");
+
+const ONBOARDING_KEY = "ww2map_onboarding_seen";
+
+function dismissOnboarding() {
+    onboarding.style("display", "none");
+    try {
+        localStorage.setItem(ONBOARDING_KEY, "true");
+    } catch (e) {
+    }
+}
+
+function initOnboarding() {
+    let seen = false;
+    try {
+        seen = localStorage.getItem(ONBOARDING_KEY) === "true";
+    } catch (e) {
+        seen = false;
+    }
+    if (seen) {
+        onboarding.style("display", "none");
+        return;
+    }
+    onboarding.style("display", "flex");
+    onboarding.on("click", (e) => {
+        if (e.target.id === "onboarding-close" || e.target.id === "onboarding" || e.target.id === "onboarding-dismiss") {
+            dismissOnboarding();
+        }
+    });
+}
+
+initOnboarding();
 
 function getSize() {
     return { width: window.innerWidth, height: window.innerHeight };
@@ -148,10 +180,45 @@ let zoom;
 let activeBattle = null;
 let currentTransform = d3.zoomIdentity;
 let rafPending = false;
+let validBattles = [];
+
+const ZOOM_MAX = 8;
+const AUTO_ZOOM_K = 6;
+const BATTLE_LABEL_MIN_ZOOM = AUTO_ZOOM_K - 0.5;
+const BATTLE_R_MIN = 4;
+const BATTLE_R_MAX = 8;
+const CITY_SUPPRESS_PX = 70;
+
+function battleRadius(k) {
+    const ratio = (k - 1) / (ZOOM_MAX - 1);
+    return BATTLE_R_MIN + (BATTLE_R_MAX - BATTLE_R_MIN) * ratio;
+}
+
+function isCitySuppressed(c, t) {
+    const cp = t.apply(c.__p);
+    for (const b of validBattles) {
+        const bp = t.apply(b.__p);
+        const dx = cp[0] - bp[0];
+        const dy = cp[1] - bp[1];
+        if (Math.sqrt(dx * dx + dy * dy) < CITY_SUPPRESS_PX) return true;
+    }
+    return false;
+}
+
+function renderTooltip(b) {
+    tooltip
+        .style("display", "block")
+        .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div><div id="tt-summary">${b.summary}</div>`);
+}
 
 function positionTooltip(t) {
     if (!activeBattle) return;
     const pt = t.apply(activeBattle.__p);
+    if (t.k < 2 || pt[0] < 0 || pt[0] > width || pt[1] < 0 || pt[1] > height) {
+        activeBattle = null;
+        tooltip.style("display", "none");
+        return;
+    }
     const node = tooltip.node();
     const tw = node.offsetWidth;
     const th = node.offsetHeight;
@@ -182,17 +249,24 @@ function updateOverlay(t) {
     labelLayer.selectAll("circle.city")
         .attr("cx", c => t.apply(c.__p)[0])
         .attr("cy", c => t.apply(c.__p)[1])
-        .style("opacity", k >= 3.5 ? 1 : 0);
+        .style("opacity", c => (k >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0);
 
     labelLayer.selectAll("text.city-label")
         .attr("x", c => t.apply(c.__p)[0] + 6)
         .attr("y", c => t.apply(c.__p)[1] - 6)
-        .style("opacity", k >= 3.5 ? 1 : 0)
+        .style("opacity", c => (k >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0)
         .style("font-size", Math.max(7, 7 * (k / 3.5)) + "px");
 
     labelLayer.selectAll("circle.battle")
         .attr("cx", b => t.apply(b.__p)[0])
-        .attr("cy", b => t.apply(b.__p)[1]);
+        .attr("cy", b => t.apply(b.__p)[1])
+        .attr("r", battleRadius(k));
+
+    labelLayer.selectAll("text.battle-label")
+        .attr("x", b => t.apply(b.__p)[0] + 9)
+        .attr("y", b => t.apply(b.__p)[1] - 8)
+        .style("opacity", k >= BATTLE_LABEL_MIN_ZOOM ? 1 : 0)
+        .style("font-size", Math.max(10, 12 / k * 1.6) + "px");
 
     positionTooltip(t);
 }
@@ -220,8 +294,6 @@ Promise.all([
                 return b[1][1] > -60;
             })
         };
-
-        console.log("SUBJECTO values:", [...new Set(countries.features.map(d => d.properties.SUBJECTO))].sort());
 
         g = svg.append("g").attr("class", "map-layer");
         labelLayer = svg.append("g").attr("class", "map-layer");
@@ -285,7 +357,7 @@ Promise.all([
             .text(c => c.name);
 
         zoom = d3.zoom()
-            .scaleExtent([1, 8])
+            .scaleExtent([1, ZOOM_MAX])
             .extent([[0, 0], [width, height]])
             .translateExtent([[0, 0], [width, height]])
             .on("zoom", (event) => {
@@ -306,6 +378,7 @@ Promise.all([
     .then(battles => {
         const valid = battles.filter(b => b.lat !== null && b.lng !== null);
         valid.forEach(b => { b.__p = projection([b.lng, b.lat]); });
+        validBattles = valid;
 
         const battleCoords = new Set(valid.map(b => `${b.lat},${b.lng}`));
 
@@ -319,21 +392,28 @@ Promise.all([
             .enter()
             .append("circle")
             .attr("class", "battle")
-            .attr("r", 5)
             .on("click", (event, b) => {
                 event.stopPropagation();
                 activeBattle = b;
-                tooltip
-                    .style("display", "block")
-                    .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div>${b.summary}`);
-                const k = 6;
+                renderTooltip(b);
                 svg.transition()
                     .duration(750)
                     .call(
                         zoom.transform,
-                        d3.zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-b.__p[0], -b.__p[1])
+                        d3.zoomIdentity.translate(width / 2, height / 2).scale(AUTO_ZOOM_K).translate(-b.__p[0], -b.__p[1])
                     );
             });
+
+        labelLayer.selectAll("text.battle-label")
+            .data(valid)
+            .enter()
+            .append("text")
+            .attr("class", "battle-label")
+            .attr("x", b => b.__p[0] + 9)
+            .attr("y", b => b.__p[1] - 8)
+            .style("opacity", 0)
+            .style("pointer-events", "none")
+            .text(b => b.name);
 
         updateOverlay(currentTransform);
     })
@@ -360,5 +440,6 @@ window.addEventListener("resize", () => {
     labelLayer.selectAll("text.country-label").each(d => { d.__lp = labelPoint(d); });
     CITIES.forEach(c => { c.__p = projection([c.lng, c.lat]); });
     labelLayer.selectAll("circle.battle").each(b => { b.__p = projection([b.lng, b.lat]); });
+    labelLayer.selectAll("text.battle-label").each(b => { b.__p = projection([b.lng, b.lat]); });
     updateOverlay(currentTransform);
 });

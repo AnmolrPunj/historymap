@@ -86,10 +86,23 @@ html {
 }
 
 .battle {
-    fill: #8b3a3a;
+    fill: #c23b3b;
     stroke: #ffffff;
-    stroke-width: 1.5;
+    stroke-width: 2.5px;
     cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+
+.battle-label {
+    fill: #7a1f1f;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    pointer-events: none;
+    text-rendering: geometricPrecision;
+    paint-order: stroke;
+    stroke: #f5f1e6;
+    stroke-width: 3px;
+    stroke-linejoin: round;
 }
 
 #tooltip {
@@ -124,4 +137,67 @@ html {
     cursor: pointer;
     font-size: 16px;
     margin-left: 8px;
+}
+
+#onboarding {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(46, 64, 84, 0.75);
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+}
+
+#onboarding-card {
+    position: relative;
+    max-width: 420px;
+    width: calc(100% - 48px);
+    background: #e8e2d0;
+    color: #1a1a16;
+    padding: 28px 26px 24px;
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+#onboarding-card h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+}
+
+#onboarding-card p {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3a392f;
+}
+
+#onboarding-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #6b6555;
+}
+
+#onboarding-dismiss {
+    display: block;
+    margin-left: auto;
+    background: #8b3a3a;
+    color: #e8e2d0;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#onboarding-dismiss:hover {
+    background: #6f2e2e;
 }
