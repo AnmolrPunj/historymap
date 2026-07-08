@@ -181,6 +181,7 @@ let activeBattle = null;
 let currentTransform = d3.zoomIdentity;
 let rafPending = false;
 let validBattles = [];
+let isAutoZooming = false;
 
 const ZOOM_MAX = 8;
 const AUTO_ZOOM_K = 6;
@@ -214,7 +215,7 @@ function renderTooltip(b) {
 function positionTooltip(t) {
     if (!activeBattle) return;
     const pt = t.apply(activeBattle.__p);
-    if (t.k < 2 || pt[0] < 0 || pt[0] > width || pt[1] < 0 || pt[1] > height) {
+    if (!isAutoZooming && (t.k < 2 || pt[0] < 0 || pt[0] > width || pt[1] < 0 || pt[1] > height)) {
         activeBattle = null;
         tooltip.style("display", "none");
         return;
@@ -396,12 +397,19 @@ Promise.all([
                 event.stopPropagation();
                 activeBattle = b;
                 renderTooltip(b);
+                isAutoZooming = true;
                 svg.transition()
                     .duration(750)
                     .call(
                         zoom.transform,
                         d3.zoomIdentity.translate(width / 2, height / 2).scale(AUTO_ZOOM_K).translate(-b.__p[0], -b.__p[1])
-                    );
+                    )
+                    .on("end", () => {
+                        isAutoZooming = false;
+                    })
+                    .on("interrupt", () => {
+                        isAutoZooming = false;
+                    });
             });
 
         labelLayer.selectAll("text.battle-label")

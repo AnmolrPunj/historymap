@@ -54,5 +54,29 @@
         "lat": 21.37,
         "lng": -157.95,
         "summary": "On 7 December 1941, Japan launched a surprise attack on the US Pacific Fleet at Pearl Harbor, Hawaii — the opening strike of a coordinated Southern Operation simultaneously targeting British forces in Malaya and American forces in the Philippines. A strike force of 414 aircraft, having travelled 5,600km under complete radio silence, launched two waves of attacks beginning at 7:40am. The attack killed 2,404 military personnel and civilians, destroyed or damaged 21 ships and 347 aircraft. Japan hoped the destruction of the Pacific Fleet would force America to sue for peace. Instead, the United States declared war the following day — and Germany and Italy declared war on America on 10–11 December, bringing the full weight of the US into the war on both fronts."
-    }
+    },
+    {
+        "id": "malaya",
+        "name": "Invasion of Malaya",
+        "dates": "8 December 1941 – 31 January 1942",
+        "lat": 6.13,
+        "lng": 102.24,
+        "summary": "Japanese forces landed at Kota Bharu on the northeast coast of British Malaya within hours of the Pearl Harbor attack, opening a campaign to seize a region prized for its rubber and tin and to secure the most direct route toward Singapore. Despite being outnumbered, battle-hardened Japanese troops advanced rapidly, using bicycles seized from local civilians and coastal landings to repeatedly outflank Commonwealth defenders, while superior aircraft and naval forces secured control of the skies and surrounding seas. Cautious and poorly coordinated Commonwealth commanders proved unable to check the advance, and by 31 January 1942 the last British forces had withdrawn across the causeway into Singapore, which engineers then demolished behind them."
+    },
+    {
+        "id": "singapore",
+        "name": "Fall of Singapore",
+        "dates": "8–15 February 1942",
+        "lat": 1.35,
+        "lng": 103.82,
+        "summary": "Built around the interwar Singapore Strategy — the belief that a relocated Royal Navy fleet could always defend the island in a Pacific war — Singapore's defences had been chronically underfunded, and by 1942 Britain had no fleet available to send. Although Commonwealth troops outnumbered the attacking Japanese roughly two to one, General Percival misjudged the main axis of attack, weakening the northeast in favour of the northwest and leaving his forces out of position when the Japanese assault began on 8 February. Crippled by low morale after two months of defeats in Malaya, poor-quality defences, and the loss of the causeway crossing, the garrison collapsed within a week; Percival surrendered on 15 February 1942 in what Churchill called the worst disaster and largest capitulation in British military history, a defeat that also badly strained Britain's relationship with Australia."
+    },
+    {
+        "id": "leningrad",
+        "name": "Siege of Leningrad",
+        "dates": "8 September 1941 – 27 January 1944",
+        "lat": 59.94,
+        "lng": 30.31,
+        "summary": "As one of the primary objectives of Army Group North during Operation Barbarossa, Leningrad was encircled by German forces by early September 1941, prompting Hitler to abandon plans to capture the city in favour of shelling, bombing, and starving its roughly 2.5 million inhabitants rather than committing resources to feeding them. Civilian rations fell to as little as 125 grams of bread a day, and during the winter of 1941–42 an estimated 100,000 residents died of starvation each month, forcing survivors to eat wallpaper glue, pets, and, in the most extreme cases, each other. A precarious supply route across the frozen Lake Ladoga sustained the city until a Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died — nearly matching the combined wartime death toll of the United Kingdom and United States."
+    }    
 ]
