@@ -400,9 +400,27 @@ Promise.all([
                 currentTransform = event.transform;
                 g.attr("transform", event.transform);
                 scheduleOverlayUpdate(event.transform);
+                try {
+                    sessionStorage.setItem("ww2map_transform", JSON.stringify({
+                        k: event.transform.k,
+                        x: event.transform.x,
+                        y: event.transform.y
+                    }));
+                } catch (e) {
+                }
             });
 
         svg.call(zoom);
+
+        try {
+            const saved = sessionStorage.getItem("ww2map_transform");
+            if (saved) {
+                const s = JSON.parse(saved);
+                const restored = d3.zoomIdentity.translate(s.x, s.y).scale(s.k);
+                svg.call(zoom.transform, restored);
+            }
+        } catch (e) {
+        }
 
         svg.on("click", () => {
             activeBattle = null;

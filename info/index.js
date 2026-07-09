@@ -7,20 +7,21 @@ function renderNotFound() {
 }
 
 function renderBattle(summary, detail) {
-    const factsHtml = `
-        <div class="facts">
-            <div><span class="label">Commanders</span>${detail.commanders}</div>
-            <div><span class="label">Forces</span>${detail.forces}</div>
-            <div><span class="label">Casualties</span>${detail.casualties}</div>
-            <div><span class="label">Outcome</span>${detail.outcome}</div>
-        </div>
+    const dispatchHtml = `
+        <ul class="dispatch">
+            <li><span class="field-label">Commanders:</span> ${detail.commanders}</li>
+            <li><span class="field-label">Forces:</span> ${detail.forces}</li>
+            <li><span class="field-label">Casualties:</span> ${detail.casualties}</li>
+            <li><span class="field-label">Outcome:</span> ${detail.outcome}</li>
+        </ul>
     `;
     const paragraphsHtml = detail.paragraphs.map(p => `<p>${p}</p>`).join("");
     content.innerHTML = `
         <h1>${summary.name}</h1>
         <div class="dates">${summary.dates}</div>
-        ${factsHtml}
+        ${dispatchHtml}
         ${paragraphsHtml}
+        <h2 class="significance-heading">Why it mattered</h2>
         <p class="significance">${detail.significance}</p>
     `;
 }
