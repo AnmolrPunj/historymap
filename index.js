@@ -209,7 +209,7 @@ function isCitySuppressed(c, t) {
 function renderTooltip(b) {
     tooltip
         .style("display", "block")
-        .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div><div id="tt-summary">${b.summary}</div>`);
+        .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div><div id="tt-summary">${b.summary}</div><a id="tt-readmore" href="info/index.html?id=${b.id}">Read more →</a>`);
 }
 
 function positionTooltip(t) {

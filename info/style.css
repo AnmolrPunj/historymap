@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #2e4054;
+    font-family: Georgia, serif;
+    color: #1a1a16;
+}
+
+#back-link {
+    display: inline-block;
+    color: #e8e2d0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 16px 24px;
+}
+
+#back-link:hover {
+    text-decoration: underline;
+}
+
+#content {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    background: #e8e2d0;
+    border-radius: 6px;
+    padding: 32px 40px 48px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+#content h1 {
+    font-size: 30px;
+    margin: 0 0 4px;
+}
+
+#content .dates {
+    font-size: 15px;
+    color: #6b6555;
+    margin-bottom: 24px;
+}
+
+#content .facts {
+    background: #d8d0ba;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+#content .facts div {
+    margin-bottom: 8px;
+}
+
+#content .facts div:last-child {
+    margin-bottom: 0;
+}
+
+#content .facts .label {
+    font-weight: bold;
+    display: block;
+    color: #4a4535;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+#content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+#content .significance {
+    border-left: 3px solid #8b3a3a;
+    padding-left: 16px;
+    font-style: italic;
+    color: #3a392f;
+}
+
+#not-found {
+    text-align: center;
+    color: #e8e2d0;
+    padding: 80px 20px;
+    font-size: 18px;
+}
