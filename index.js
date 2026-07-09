@@ -182,6 +182,7 @@ let currentTransform = d3.zoomIdentity;
 let rafPending = false;
 let validBattles = [];
 let isAutoZooming = false;
+let tooltipSide = null;
 
 const ZOOM_MAX = 8;
 const AUTO_ZOOM_K = 6;
@@ -212,20 +213,54 @@ function renderTooltip(b) {
         .html(`<span id="tt-close">×</span><h3>${b.name}</h3><div class="dates">${b.dates}</div><div id="tt-summary">${b.summary}</div><a id="tt-readmore" href="info/index.html?id=${b.id}">Read more →</a>`);
 }
 
+function computeFinalTransform(b) {
+    return d3.zoomIdentity.translate(width / 2, height / 2).scale(AUTO_ZOOM_K).translate(-b.__p[0], -b.__p[1]);
+}
+
+function pickTooltipSide(t, pt, tw, th) {
+    const options = [
+        { dx: 1, dy: 1 },
+        { dx: -1, dy: 1 },
+        { dx: 1, dy: -1 },
+        { dx: -1, dy: -1 }
+    ];
+    let best = options[0];
+    let bestCount = Infinity;
+    for (const o of options) {
+        const cx = o.dx === 1 ? pt[0] + 14 : pt[0] - tw - 14;
+        const cy = o.dy === 1 ? pt[1] + 14 : pt[1] - th - 14;
+        let count = 0;
+        for (const b of validBattles) {
+            if (b === activeBattle) continue;
+            const bp = t.apply(b.__p);
+            if (bp[0] >= cx && bp[0] <= cx + tw && bp[1] >= cy && bp[1] <= cy + th) count++;
+        }
+        if (count < bestCount) {
+            bestCount = count;
+            best = o;
+        }
+    }
+    return best;
+}
+
 function positionTooltip(t) {
     if (!activeBattle) return;
     const pt = t.apply(activeBattle.__p);
     if (!isAutoZooming && (t.k < 2 || pt[0] < 0 || pt[0] > width || pt[1] < 0 || pt[1] > height)) {
         activeBattle = null;
+        tooltipSide = null;
         tooltip.style("display", "none");
         return;
     }
     const node = tooltip.node();
     const tw = node.offsetWidth;
     const th = node.offsetHeight;
-    let x = pt[0] + 14;
-    let y = pt[1] + 14;
-    if (x + tw > width - 8) x = pt[0] - tw - 14;
+    if (!tooltipSide) {
+        tooltipSide = pickTooltipSide(t, pt, tw, th);
+    }
+    let x = tooltipSide.dx === 1 ? pt[0] + 14 : pt[0] - tw - 14;
+    let y = tooltipSide.dy === 1 ? pt[1] + 14 : pt[1] - th - 14;
+    if (x + tw > width - 8) x = width - tw - 8;
     if (y + th > height - 8) y = height - th - 8;
     if (x < 8) x = 8;
     if (y < 8) y = 8;
@@ -371,6 +406,7 @@ Promise.all([
 
         svg.on("click", () => {
             activeBattle = null;
+            tooltipSide = null;
             tooltip.style("display", "none");
         });
 
@@ -397,12 +433,17 @@ Promise.all([
                 event.stopPropagation();
                 activeBattle = b;
                 renderTooltip(b);
+                const node = tooltip.node();
+                const tw = node.offsetWidth;
+                const th = node.offsetHeight;
+                const finalT = computeFinalTransform(b);
+                tooltipSide = pickTooltipSide(finalT, finalT.apply(b.__p), tw, th);
                 isAutoZooming = true;
                 svg.transition()
                     .duration(750)
                     .call(
                         zoom.transform,
-                        d3.zoomIdentity.translate(width / 2, height / 2).scale(AUTO_ZOOM_K).translate(-b.__p[0], -b.__p[1])
+                        finalT
                     )
                     .on("end", () => {
                         isAutoZooming = false;
@@ -432,6 +473,7 @@ Promise.all([
 tooltip.on("click", (e) => {
     if (e.target.id === "tt-close") {
         activeBattle = null;
+        tooltipSide = null;
         tooltip.style("display", "none");
     }
 });

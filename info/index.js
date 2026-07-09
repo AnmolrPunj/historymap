@@ -15,11 +15,12 @@ function renderBattle(summary, detail) {
             <div><span class="label">Outcome</span>${detail.outcome}</div>
         </div>
     `;
+    const paragraphsHtml = detail.paragraphs.map(p => `<p>${p}</p>`).join("");
     content.innerHTML = `
         <h1>${summary.name}</h1>
         <div class="dates">${summary.dates}</div>
         ${factsHtml}
-        <p>${detail.narrative}</p>
+        ${paragraphsHtml}
         <p class="significance">${detail.significance}</p>
     `;
 }
