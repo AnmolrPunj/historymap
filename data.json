@@ -78,5 +78,13 @@
         "lat": 59.94,
         "lng": 30.31,
         "summary": "As one of the primary objectives of Army Group North during Operation Barbarossa, Leningrad was encircled by German forces by early September 1941, prompting Hitler to abandon plans to capture the city in favour of shelling, bombing, and starving its roughly 2.5 million inhabitants rather than committing resources to feeding them. Civilian rations fell to as little as 125 grams of bread a day, and during the winter of 1941–42 an estimated 100,000 residents died of starvation each month, forcing survivors to eat wallpaper glue, pets, and, in the most extreme cases, each other. A precarious supply route across the frozen Lake Ladoga sustained the city until a Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died — nearly matching the combined wartime death toll of the United Kingdom and United States."
+    },
+    {
+        "id": "invasion-of-poland",
+        "name": "Invasion of Poland",
+        "dates": "1 September – 6 October 1939",
+        "lat": 52.23,
+        "lng": 21.01,
+        "summary": "At 4:45am on 1 September 1939, German forces invaded Poland after months of escalating demands over the Free City of Danzig and the Polish Corridor, following a staged border incident manufactured to justify the attack as self-defence. With the Nazi-Soviet Pact removing any risk of Soviet intervention, German forces converged on Warsaw from three directions while the Soviet Union invaded from the east on 17 September under the pact's secret terms. Warsaw held out under siege until 28 September, and the last organised resistance ended on 6 October, marking the formal beginning of the Second World War in Europe."
     }    
 ]
