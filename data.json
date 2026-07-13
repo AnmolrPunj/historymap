@@ -5,7 +5,7 @@
         "dates": "13 August – 26 November 1937",
         "lat": 31.23,
         "lng": 121.47,
-        "summary": "The first major battle of the Second Sino-Japanese War. Chiang Kai-shek committed his best-trained divisions to defend the city, adopting a strategy of trading space for time against a superior Japanese military. After three months of brutal urban fighting, Japanese forces took the city at a cost of roughly 60,000 Japanese casualties against approximately 250,000 Chinese and the surviving Chinese forces withdrew toward Nanjing."
+        "summary": "The first major battle of the Second Sino-Japanese War, fought over three brutal months in China's most modern city after Chiang Kai-shek committed his best-trained divisions to defend it. Japanese forces finally broke through in November 1937, and the surviving Chinese army withdrew toward Nanjing."
     },
     {
         "id": "nanjing",
@@ -13,8 +13,16 @@
         "dates": "1–13 December 1937; massacre continued ~6 weeks",
         "lat": 32.06,
         "lng": 118.80,
-        "summary": "After Shanghai fell, Japanese forces advanced on the Chinese capital of Nanjing, taking the city on 13 December 1937 after a comparatively brief battle. What followed defined the event: over roughly six weeks, Japanese troops carried out mass executions of prisoners of war and civilians alongside widespread sexual violence, killing an estimated 200,000–300,000 people in one of the worst atrocities of the twentieth century."
-    }, 
+        "summary": "After Shanghai fell, Japanese forces took China's capital within days in December 1937. What followed defined the event: roughly six weeks of mass executions and widespread sexual violence, one of the worst atrocities of the twentieth century."
+    },
+    {
+        "id": "invasion-of-poland",
+        "name": "Invasion of Poland",
+        "dates": "1 September – 6 October 1939",
+        "lat": 52.23,
+        "lng": 21.01,
+        "summary": "Germany's invasion of Poland on 1 September 1939, followed two weeks later by a Soviet invasion from the east, marked the formal beginning of the Second World War in Europe."
+    },
     {
         "id": "battle-of-france",
         "name": "Battle of France",
@@ -53,7 +61,7 @@
         "dates": "7 December 1941",
         "lat": 21.37,
         "lng": -157.95,
-        "summary": "On 7 December 1941, Japan launched a surprise attack on the US Pacific Fleet at Pearl Harbor, Hawaii — the opening strike of a coordinated Southern Operation simultaneously targeting British forces in Malaya and American forces in the Philippines. A strike force of 414 aircraft, having travelled 5,600km under complete radio silence, launched two waves of attacks beginning at 7:40am. The attack killed 2,404 military personnel and civilians, destroyed or damaged 21 ships and 347 aircraft. Japan hoped the destruction of the Pacific Fleet would force America to sue for peace. Instead, the United States declared war the following day — and Germany and Italy declared war on America on 10–11 December, bringing the full weight of the US into the war on both fronts."
+        "summary": "On 7 December 1941, Japan launched a surprise attack on the US Pacific Fleet at Pearl Harbor, Hawaii the opening strike of a coordinated Southern Operation simultaneously targeting British forces in Malaya and American forces in the Philippines. A strike force of 414 aircraft, having travelled 5,600km under complete radio silence, launched two waves of attacks beginning at 7:40am. The attack killed 2,404 military personnel and civilians, destroyed or damaged 21 ships and 347 aircraft. Japan hoped the destruction of the Pacific Fleet would force America to sue for peace. Instead, the United States declared war the following day and Germany and Italy declared war on America on 10–11 December, bringing the full weight of the US into the war on both fronts."
     },
     {
         "id": "malaya",
@@ -69,7 +77,7 @@
         "dates": "8–15 February 1942",
         "lat": 1.35,
         "lng": 103.82,
-        "summary": "Built around the interwar Singapore Strategy — the belief that a relocated Royal Navy fleet could always defend the island in a Pacific war — Singapore's defences had been chronically underfunded, and by 1942 Britain had no fleet available to send. Although Commonwealth troops outnumbered the attacking Japanese roughly two to one, General Percival misjudged the main axis of attack, weakening the northeast in favour of the northwest and leaving his forces out of position when the Japanese assault began on 8 February. Crippled by low morale after two months of defeats in Malaya, poor-quality defences, and the loss of the causeway crossing, the garrison collapsed within a week; Percival surrendered on 15 February 1942 in what Churchill called the worst disaster and largest capitulation in British military history, a defeat that also badly strained Britain's relationship with Australia."
+        "summary": "Built around the interwar Singapore Strategy the belief that a relocated Royal Navy fleet could always defend the island in a Pacific war Singapore's defences had been chronically underfunded, and by 1942 Britain had no fleet available to send. Although Commonwealth troops outnumbered the attacking Japanese roughly two to one, General Percival misjudged the main axis of attack, weakening the northeast in favour of the northwest and leaving his forces out of position when the Japanese assault began on 8 February. Crippled by low morale after two months of defeats in Malaya, poor-quality defences, and the loss of the causeway crossing, the garrison collapsed within a week; Percival surrendered on 15 February 1942 in what Churchill called the worst disaster and largest capitulation in British military history, a defeat that also badly strained Britain's relationship with Australia."
     },
     {
         "id": "leningrad",
@@ -77,14 +85,6 @@
         "dates": "8 September 1941 – 27 January 1944",
         "lat": 59.94,
         "lng": 30.31,
-        "summary": "As one of the primary objectives of Army Group North during Operation Barbarossa, Leningrad was encircled by German forces by early September 1941, prompting Hitler to abandon plans to capture the city in favour of shelling, bombing, and starving its roughly 2.5 million inhabitants rather than committing resources to feeding them. Civilian rations fell to as little as 125 grams of bread a day, and during the winter of 1941–42 an estimated 100,000 residents died of starvation each month, forcing survivors to eat wallpaper glue, pets, and, in the most extreme cases, each other. A precarious supply route across the frozen Lake Ladoga sustained the city until a Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died — nearly matching the combined wartime death toll of the United Kingdom and United States."
-    },
-    {
-        "id": "invasion-of-poland",
-        "name": "Invasion of Poland",
-        "dates": "1 September – 6 October 1939",
-        "lat": 52.23,
-        "lng": 21.01,
-        "summary": "At 4:45am on 1 September 1939, German forces invaded Poland after months of escalating demands over the Free City of Danzig and the Polish Corridor, following a staged border incident manufactured to justify the attack as self-defence. With the Nazi-Soviet Pact removing any risk of Soviet intervention, German forces converged on Warsaw from three directions while the Soviet Union invaded from the east on 17 September under the pact's secret terms. Warsaw held out under siege until 28 September, and the last organised resistance ended on 6 October, marking the formal beginning of the Second World War in Europe."
-    }    
+        "summary": "As one of the primary objectives of Army Group North during Operation Barbarossa, Leningrad was encircled by German forces by early September 1941, prompting Hitler to abandon plans to capture the city in favour of shelling, bombing, and starving its roughly 2.5 million inhabitants rather than committing resources to feeding them. Civilian rations fell to as little as 125 grams of bread a day, and during the winter of 1941–42 an estimated 100,000 residents died of starvation each month, forcing survivors to eat wallpaper glue, pets, and, in the most extreme cases, each other. A precarious supply route across the frozen Lake Ladoga sustained the city until a Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died nearly matching the combined wartime death toll of the United Kingdom and United States."
+    }
 ]
