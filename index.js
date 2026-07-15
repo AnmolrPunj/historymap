@@ -184,9 +184,13 @@ let validBattles = [];
 let isAutoZooming = false;
 let tooltipSide = null;
 
+const isMobile = window.innerWidth < 768;
+const MOBILE_DEFAULT_ZOOM = 2.5;
+const MOBILE_AUTO_ZOOM_K = 4;
+
 const ZOOM_MAX = 8;
 const AUTO_ZOOM_K = 6;
-const BATTLE_LABEL_MIN_ZOOM = AUTO_ZOOM_K - 0.5;
+const BATTLE_LABEL_MIN_ZOOM = 2;
 const BATTLE_R_MIN = 4;
 const BATTLE_R_MAX = 8;
 const CITY_SUPPRESS_PX = 70;
@@ -214,7 +218,8 @@ function renderTooltip(b) {
 }
 
 function computeFinalTransform(b) {
-    return d3.zoomIdentity.translate(width / 2, height / 2).scale(AUTO_ZOOM_K).translate(-b.__p[0], -b.__p[1]);
+    const zoomK = isMobile ? MOBILE_AUTO_ZOOM_K : AUTO_ZOOM_K;
+    return d3.zoomIdentity.translate(width / 2, height / 2).scale(zoomK).translate(-b.__p[0], -b.__p[1]);
 }
 
 function pickTooltipSide(t, pt, tw, th) {
@@ -269,29 +274,31 @@ function positionTooltip(t) {
 
 function updateOverlay(t) {
     const k = t.k;
+    // normalise zoom so mobile 2.5 === desktop 1 for label thresholds
+    const effectiveK = isMobile ? k / MOBILE_DEFAULT_ZOOM : k;
 
-    g.selectAll("path.river").style("opacity", k >= 2 ? 1 : 0);
+    g.selectAll("path.river").style("opacity", effectiveK >= 2 ? 1 : 0);
 
     labelLayer.selectAll("text.country-label")
         .attr("x", d => t.apply(d.__lp)[0])
         .attr("y", d => t.apply(d.__lp)[1])
         .style("opacity", d => {
-            if (k < 2) return 0;
-            if (COUNTRIES_WITH_CITIES.has(d.properties.NAME)) return k < 3.2 ? 1 : 0;
+            if (effectiveK < 2) return 0;
+            if (COUNTRIES_WITH_CITIES.has(d.properties.NAME)) return effectiveK < 3.2 ? 1 : 0;
             return 1;
         })
-        .style("font-size", Math.max(8, 10 / k * 1.5) + "px");
+        .style("font-size", Math.max(8, 10 / effectiveK * 1.5) + "px");
 
     labelLayer.selectAll("circle.city")
         .attr("cx", c => t.apply(c.__p)[0])
         .attr("cy", c => t.apply(c.__p)[1])
-        .style("opacity", c => (k >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0);
+        .style("opacity", c => (effectiveK >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0);
 
     labelLayer.selectAll("text.city-label")
         .attr("x", c => t.apply(c.__p)[0] + 6)
         .attr("y", c => t.apply(c.__p)[1] - 6)
-        .style("opacity", c => (k >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0)
-        .style("font-size", Math.max(7, 7 * (k / 3.5)) + "px");
+        .style("opacity", c => (effectiveK >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0)
+        .style("font-size", Math.max(7, 7 * (effectiveK / 3.5)) + "px");
 
     labelLayer.selectAll("circle.battle")
         .attr("cx", b => t.apply(b.__p)[0])
@@ -301,8 +308,8 @@ function updateOverlay(t) {
     labelLayer.selectAll("text.battle-label")
         .attr("x", b => t.apply(b.__p)[0] + 9)
         .attr("y", b => t.apply(b.__p)[1] - 8)
-        .style("opacity", k >= BATTLE_LABEL_MIN_ZOOM ? 1 : 0)
-        .style("font-size", Math.max(10, 12 / k * 1.6) + "px");
+        .style("opacity", effectiveK >= BATTLE_LABEL_MIN_ZOOM ? 1 : 0)
+        .style("font-size", Math.max(10, 12 / effectiveK * 1.6) + "px");
 
     positionTooltip(t);
 }
@@ -393,31 +400,42 @@ Promise.all([
             .text(c => c.name);
 
         zoom = d3.zoom()
-            .scaleExtent([1, ZOOM_MAX])
+            .scaleExtent([isMobile ? MOBILE_DEFAULT_ZOOM : 1, ZOOM_MAX])
             .extent([[0, 0], [width, height]])
-            .translateExtent([[0, 0], [width, height]])
+            .translateExtent(isMobile
+                ? [[-width * 2, -height * 2], [width * 3, height * 3]]
+                : [[0, 0], [width, height]])
             .on("zoom", (event) => {
                 currentTransform = event.transform;
                 g.attr("transform", event.transform);
                 scheduleOverlayUpdate(event.transform);
-                try {
-                    sessionStorage.setItem("ww2map_transform", JSON.stringify({
-                        k: event.transform.k,
-                        x: event.transform.x,
-                        y: event.transform.y
-                    }));
-                } catch (e) {
+                if (!isMobile) {
+                    try {
+                        sessionStorage.setItem("ww2map_transform", JSON.stringify({
+                            k: event.transform.k,
+                            x: event.transform.x,
+                            y: event.transform.y
+                        }));
+                    } catch (e) {
+                    }
                 }
             });
 
         svg.call(zoom);
 
         try {
-            const saved = sessionStorage.getItem("ww2map_transform");
+            const saved = isMobile ? null : sessionStorage.getItem("ww2map_transform");
             if (saved) {
                 const s = JSON.parse(saved);
                 const restored = d3.zoomIdentity.translate(s.x, s.y).scale(s.k);
                 svg.call(zoom.transform, restored);
+            } else if (isMobile) {
+                const europeCenter = projection([20, 50]);
+                const mobileDefault = d3.zoomIdentity
+                    .translate(width / 2, height / 2)
+                    .scale(MOBILE_DEFAULT_ZOOM)
+                    .translate(-europeCenter[0], -europeCenter[1]);
+                svg.call(zoom.transform, mobileDefault);
             }
         } catch (e) {
         }
@@ -459,16 +477,9 @@ Promise.all([
                 isAutoZooming = true;
                 svg.transition()
                     .duration(750)
-                    .call(
-                        zoom.transform,
-                        finalT
-                    )
-                    .on("end", () => {
-                        isAutoZooming = false;
-                    })
-                    .on("interrupt", () => {
-                        isAutoZooming = false;
-                    });
+                    .call(zoom.transform, finalT)
+                    .on("end", () => { isAutoZooming = false; })
+                    .on("interrupt", () => { isAutoZooming = false; });
             });
 
         labelLayer.selectAll("text.battle-label")
