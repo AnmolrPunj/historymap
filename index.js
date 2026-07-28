@@ -377,6 +377,13 @@ Promise.all([
             .style("opacity", 0)
             .text(d => d.properties.NAME);
 
+        const worldBounds = path.bounds(countries);
+        const PAN_MARGIN = 60;
+        const mobileTranslateExtent = [
+            [worldBounds[0][0] - PAN_MARGIN, worldBounds[0][1] - PAN_MARGIN],
+            [worldBounds[1][0] + PAN_MARGIN, worldBounds[1][1] + PAN_MARGIN]
+        ];
+
         CITIES.forEach(c => { c.__p = projection([c.lng, c.lat]); });
 
         labelLayer.selectAll("circle.city")
@@ -403,7 +410,7 @@ Promise.all([
             .scaleExtent([isMobile ? MOBILE_DEFAULT_ZOOM : 1, ZOOM_MAX])
             .extent([[0, 0], [width, height]])
             .translateExtent(isMobile
-                ? [[-width * 2, -height * 2], [width * 3, height * 3]]
+                ? mobileTranslateExtent
                 : [[0, 0], [width, height]])
             .on("zoom", (event) => {
                 currentTransform = event.transform;
