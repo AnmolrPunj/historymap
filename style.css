@@ -33,7 +33,7 @@ html {
 .land {
     stroke: #2e4054;
     stroke-width: 0.4;
-    shape-rendering: geometricPrecision;
+    shape-rendering: optimizeSpeed;
 }
 
 .lake {
@@ -61,7 +61,7 @@ html {
     pointer-events: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-rendering: geometricPrecision;
+    text-rendering: optimizeSpeed;
     paint-order: stroke;
     stroke: #e8e2d0;
     stroke-width: 3px;
@@ -78,7 +78,7 @@ html {
     font-family: Georgia, serif;
     font-style: italic;
     pointer-events: none;
-    text-rendering: geometricPrecision;
+    text-rendering: optimizeSpeed;
     paint-order: stroke;
     stroke: #e8e2d0;
     stroke-width: 2px;
@@ -98,7 +98,7 @@ html {
     font-family: Georgia, serif;
     font-weight: bold;
     pointer-events: none;
-    text-rendering: geometricPrecision;
+    text-rendering: optimizeSpeed;
     paint-order: stroke;
     stroke: #f5f1e6;
     stroke-width: 3px;
