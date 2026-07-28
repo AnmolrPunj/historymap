@@ -214,3 +214,22 @@ html {
 #onboarding-dismiss:hover {
     background: #5a0505;
 }
+
+#ptr-indicator {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -40px);
+    background: #e8e2d0;
+    color: #1a1a16;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 30;
+    transition: opacity 0.1s linear;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}

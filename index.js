@@ -363,6 +363,83 @@ function syncZoomBounds() {
     zoom.translateExtent(isMobile ? computeTranslateExtent() : [[0, 0], [width, height]]);
 }
 
+// Native pull-to-refresh can't coexist with our custom touch panning (there's
+// no scrollable surface for the browser to hook into), so this reimplements
+// the gesture: once the map is panned as far up as it can go, dragging down
+// further past a threshold triggers a reload.
+const PTR_THRESHOLD = 70;
+
+function setupPullToRefresh() {
+    if (!isMobile) return;
+
+    const indicator = document.createElement("div");
+    indicator.id = "ptr-indicator";
+    indicator.textContent = "Pull to reload";
+    document.body.appendChild(indicator);
+
+    let touchId = null;
+    let startY = 0;
+    let armed = false;
+    let pulling = false;
+
+    function topEdgeScreenY() {
+        const extent = computeTranslateExtent();
+        return currentTransform.apply([0, extent[0][1]])[1];
+    }
+
+    function isPannedToTop() {
+        return topEdgeScreenY() >= -2;
+    }
+
+    function reset() {
+        armed = false;
+        pulling = false;
+        indicator.style.opacity = 0;
+    }
+
+    svg.node().addEventListener("touchstart", (e) => {
+        if (e.touches.length !== 1) {
+            reset();
+            return;
+        }
+        touchId = e.touches[0].identifier;
+        startY = e.touches[0].clientY;
+        armed = isPannedToTop();
+        pulling = false;
+    }, { passive: true });
+
+    svg.node().addEventListener("touchmove", (e) => {
+        if (!armed || e.touches.length !== 1) return;
+        const touch = Array.from(e.touches).find(tt => tt.identifier === touchId);
+        if (!touch) return;
+        const dy = touch.clientY - startY;
+        if (dy > 0 && isPannedToTop()) {
+            pulling = true;
+            const pull = Math.min(dy, PTR_THRESHOLD * 1.5);
+            indicator.style.opacity = Math.min(1, pull / PTR_THRESHOLD);
+            indicator.style.transform = `translate(-50%, ${Math.min(pull, PTR_THRESHOLD) - 40}px)`;
+            indicator.textContent = pull >= PTR_THRESHOLD ? "Release to reload" : "Pull to reload";
+        } else {
+            pulling = false;
+            indicator.style.opacity = 0;
+        }
+    }, { passive: true });
+
+    svg.node().addEventListener("touchend", (e) => {
+        if (pulling) {
+            const touch = e.changedTouches[0];
+            const dy = touch ? touch.clientY - startY : 0;
+            if (dy >= PTR_THRESHOLD) {
+                location.reload();
+                return;
+            }
+        }
+        reset();
+    });
+
+    svg.node().addEventListener("touchcancel", reset);
+}
+
 Promise.all([
     d3.json("https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/world_1938.geojson"),
     d3.json("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_rivers_lake_centerlines.geojson"),
@@ -459,6 +536,7 @@ Promise.all([
             });
 
         syncZoomBounds();
+        setupPullToRefresh();
 
         svg.call(zoom);
 
