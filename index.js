@@ -183,6 +183,7 @@ let rafPending = false;
 let validBattles = [];
 let isAutoZooming = false;
 let tooltipSide = null;
+let countriesData = null;
 
 const isMobile = window.innerWidth < 768;
 const MOBILE_DEFAULT_ZOOM = 2.5;
@@ -194,6 +195,7 @@ const BATTLE_LABEL_MIN_ZOOM = 2;
 const BATTLE_R_MIN = 4;
 const BATTLE_R_MAX = 8;
 const CITY_SUPPRESS_PX = 70;
+const PAN_MARGIN = 60;
 
 function battleRadius(k) {
     const ratio = (k - 1) / (ZOOM_MAX - 1);
@@ -277,28 +279,46 @@ function updateOverlay(t) {
     // normalise zoom so mobile 2.5 === desktop 1 for label thresholds
     const effectiveK = isMobile ? k / MOBILE_DEFAULT_ZOOM : k;
 
-    g.selectAll("path.river").style("opacity", effectiveK >= 2 ? 1 : 0);
+    const showRivers = effectiveK >= 2;
+    g.selectAll("path.river").style("opacity", showRivers ? 1 : 0);
 
-    labelLayer.selectAll("text.country-label")
-        .attr("x", d => t.apply(d.__lp)[0])
-        .attr("y", d => t.apply(d.__lp)[1])
-        .style("opacity", d => {
-            if (effectiveK < 2) return 0;
-            if (COUNTRIES_WITH_CITIES.has(d.properties.NAME)) return effectiveK < 3.2 ? 1 : 0;
-            return 1;
-        })
-        .style("font-size", Math.max(8, 10 / effectiveK * 1.5) + "px");
+    // Country labels: only touch the DOM for these while they can actually
+    // be seen. At normal browsing zoom this is invisible work every frame.
+    const showCountryLabels = effectiveK >= 2;
+    if (showCountryLabels) {
+        labelLayer.selectAll("text.country-label")
+            .attr("x", d => t.apply(d.__lp)[0])
+            .attr("y", d => t.apply(d.__lp)[1])
+            .style("opacity", d => {
+                if (COUNTRIES_WITH_CITIES.has(d.properties.NAME)) return effectiveK < 3.2 ? 1 : 0;
+                return 1;
+            })
+            .style("font-size", Math.max(8, 10 / effectiveK * 1.5) + "px");
+    } else {
+        labelLayer.selectAll("text.country-label").style("opacity", 0);
+    }
 
-    labelLayer.selectAll("circle.city")
-        .attr("cx", c => t.apply(c.__p)[0])
-        .attr("cy", c => t.apply(c.__p)[1])
-        .style("opacity", c => (effectiveK >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0);
+    // Cities: same idea, plus compute suppression once per city instead of
+    // once for the dot and again for the label.
+    const showCities = effectiveK >= 3.5;
+    if (showCities) {
+        for (const c of CITIES) {
+            c.__suppressed = isCitySuppressed(c, t);
+        }
+        labelLayer.selectAll("circle.city")
+            .attr("cx", c => t.apply(c.__p)[0])
+            .attr("cy", c => t.apply(c.__p)[1])
+            .style("opacity", c => c.__suppressed ? 0 : 1);
 
-    labelLayer.selectAll("text.city-label")
-        .attr("x", c => t.apply(c.__p)[0] + 6)
-        .attr("y", c => t.apply(c.__p)[1] - 6)
-        .style("opacity", c => (effectiveK >= 3.5 && !isCitySuppressed(c, t)) ? 1 : 0)
-        .style("font-size", Math.max(7, 7 * (effectiveK / 3.5)) + "px");
+        labelLayer.selectAll("text.city-label")
+            .attr("x", c => t.apply(c.__p)[0] + 6)
+            .attr("y", c => t.apply(c.__p)[1] - 6)
+            .style("opacity", c => c.__suppressed ? 0 : 1)
+            .style("font-size", Math.max(7, 7 * (effectiveK / 3.5)) + "px");
+    } else {
+        labelLayer.selectAll("circle.city").style("opacity", 0);
+        labelLayer.selectAll("text.city-label").style("opacity", 0);
+    }
 
     labelLayer.selectAll("circle.battle")
         .attr("cx", b => t.apply(b.__p)[0])
@@ -323,6 +343,26 @@ function scheduleOverlayUpdate(t) {
     });
 }
 
+// Computes the pan bounds from the actual rendered map content (not an
+// arbitrary fraction of the viewport), so the limit stays correct no matter
+// what the current zoom scale or screen size is.
+function computeTranslateExtent() {
+    if (!countriesData) {
+        return [[0, 0], [width, height]];
+    }
+    const b = path.bounds(countriesData);
+    return [
+        [b[0][0] - PAN_MARGIN, b[0][1] - PAN_MARGIN],
+        [b[1][0] + PAN_MARGIN, b[1][1] + PAN_MARGIN]
+    ];
+}
+
+function syncZoomBounds() {
+    if (!zoom) return;
+    zoom.extent([[0, 0], [width, height]]);
+    zoom.translateExtent(isMobile ? computeTranslateExtent() : [[0, 0], [width, height]]);
+}
+
 Promise.all([
     d3.json("https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/world_1938.geojson"),
     d3.json("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_rivers_lake_centerlines.geojson"),
@@ -337,6 +377,7 @@ Promise.all([
                 return b[1][1] > -60;
             })
         };
+        countriesData = countries;
 
         g = svg.append("g").attr("class", "map-layer");
         labelLayer = svg.append("g").attr("class", "map-layer");
@@ -377,13 +418,6 @@ Promise.all([
             .style("opacity", 0)
             .text(d => d.properties.NAME);
 
-        const worldBounds = path.bounds(countries);
-        const PAN_MARGIN = 60;
-        const mobileTranslateExtent = [
-            [worldBounds[0][0] - PAN_MARGIN, worldBounds[0][1] - PAN_MARGIN],
-            [worldBounds[1][0] + PAN_MARGIN, worldBounds[1][1] + PAN_MARGIN]
-        ];
-
         CITIES.forEach(c => { c.__p = projection([c.lng, c.lat]); });
 
         labelLayer.selectAll("circle.city")
@@ -408,10 +442,6 @@ Promise.all([
 
         zoom = d3.zoom()
             .scaleExtent([isMobile ? MOBILE_DEFAULT_ZOOM : 1, ZOOM_MAX])
-            .extent([[0, 0], [width, height]])
-            .translateExtent(isMobile
-                ? mobileTranslateExtent
-                : [[0, 0], [width, height]])
             .on("zoom", (event) => {
                 currentTransform = event.transform;
                 g.attr("transform", event.transform);
@@ -427,6 +457,8 @@ Promise.all([
                     }
                 }
             });
+
+        syncZoomBounds();
 
         svg.call(zoom);
 
@@ -527,5 +559,6 @@ window.addEventListener("resize", () => {
     CITIES.forEach(c => { c.__p = projection([c.lng, c.lat]); });
     labelLayer.selectAll("circle.battle").each(b => { b.__p = projection([b.lng, b.lat]); });
     labelLayer.selectAll("text.battle-label").each(b => { b.__p = projection([b.lng, b.lat]); });
+    syncZoomBounds();
     updateOverlay(currentTransform);
 });
