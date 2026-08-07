@@ -33,7 +33,7 @@ html {
 .land {
     stroke: #2e4054;
     stroke-width: 0.4;
-    shape-rendering: optimizeSpeed;
+    shape-rendering: geometricPrecision;
 }
 
 .lake {
