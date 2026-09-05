@@ -539,6 +539,7 @@ Promise.all([
         setupPullToRefresh();
 
         svg.call(zoom);
+        svg.on("dblclick.zoom", null);
 
         try {
             const saved = isMobile ? null : sessionStorage.getItem("ww2map_transform");
