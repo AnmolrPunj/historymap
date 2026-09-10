@@ -276,14 +276,11 @@ function positionTooltip(t) {
 
 function updateOverlay(t) {
     const k = t.k;
-    // normalise zoom so mobile 2.5 === desktop 1 for label thresholds
     const effectiveK = isMobile ? k / MOBILE_DEFAULT_ZOOM : k;
 
     const showRivers = effectiveK >= 2;
     g.selectAll("path.river").style("opacity", showRivers ? 1 : 0);
 
-    // Country labels: only touch the DOM for these while they can actually
-    // be seen. At normal browsing zoom this is invisible work every frame.
     const showCountryLabels = effectiveK >= 2;
     if (showCountryLabels) {
         labelLayer.selectAll("text.country-label")
@@ -298,8 +295,6 @@ function updateOverlay(t) {
         labelLayer.selectAll("text.country-label").style("opacity", 0);
     }
 
-    // Cities: same idea, plus compute suppression once per city instead of
-    // once for the dot and again for the label.
     const showCities = effectiveK >= 3.5;
     if (showCities) {
         for (const c of CITIES) {
