@@ -436,15 +436,20 @@ function setupPullToRefresh() {
 }
 
 Promise.all([
-    d3.json("https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/world_1938.geojson"),
-    d3.json("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_rivers_lake_centerlines.geojson"),
-    d3.json("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_lakes.geojson")
+    d3.json("world_1938.geojson"),
+    d3.json("ne_50m_rivers_lake_centerlines.geojson"),
+    d3.json("ne_50m_lakes.geojson")
 ])
     .then(([world, rivers, lakes]) => {
         const countries = {
             type: "FeatureCollection",
             features: world.features.filter(d => {
-                if (d.properties.NAME === "Antarctica" || d.properties.SUBJECTO === "Antarctica") return false;
+                const name = d.properties?.NAME;
+                const subject = d.properties?.SUBJECTO;
+
+                if (name === "Antarctica" || subject === "Antarctica") return false;
+                if (d3.geoArea(d) > 2 * Math.PI) return false;
+
                 const b = d3.geoBounds(d);
                 return b[1][1] > -60;
             })
