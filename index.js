@@ -338,9 +338,6 @@ function scheduleOverlayUpdate(t) {
     });
 }
 
-// Computes the pan bounds from the actual rendered map content (not an
-// arbitrary fraction of the viewport), so the limit stays correct no matter
-// what the current zoom scale or screen size is.
 function computeTranslateExtent() {
     if (!countriesData) {
         return [[0, 0], [width, height]];
@@ -358,10 +355,6 @@ function syncZoomBounds() {
     zoom.translateExtent(isMobile ? computeTranslateExtent() : [[0, 0], [width, height]]);
 }
 
-// Native pull-to-refresh can't coexist with our custom touch panning (there's
-// no scrollable surface for the browser to hook into), so this reimplements
-// the gesture: once the map is panned as far up as it can go, dragging down
-// further past a threshold triggers a reload.
 const PTR_THRESHOLD = 70;
 
 function setupPullToRefresh() {
