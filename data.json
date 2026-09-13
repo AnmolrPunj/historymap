@@ -214,5 +214,161 @@
             "Vichy French resistance collapsed into a ceasefire within days, letting Allied forces push into Tunisia, where reinforced German troops mounted a stubborn defence around Kasserine Pass.",
             "Trapped between two advancing Allied armies, around 250,000 Axis troops surrendered in May 1943, ending the North Africa campaign and clearing the way for the invasion of Italy two months later."
         ]
+    },
+    {
+        "id": "the-blitz",
+        "name": "The Blitz",
+        "dates": "September 1940 - May 1941",
+        "lat": 51.51,
+        "lng": -0.13,
+        "summary": [
+            "After abandoning Operation Sea Lion, Hitler switched to bombing British industrial cities at night, hoping to terrorise the population into seeking peace.",
+            "Nightly raids targeted London, Birmingham, Coventry, Plymouth and Southampton, and incendiary bombs sparked firestorms including the 'Second Great Fire of London' in December 1940.",
+            "The bombing killed over 43,500 civilians but failed to break British morale, instead creating a defiant 'Blitz Spirit' while costing Germany thousands of aircrew it could not spare."
+        ]
+    },
+    {
+        "id": "bombing-of-hamburg",
+        "name": "Bombing of Hamburg (Operation Gomorrah)",
+        "dates": "July 1943",
+        "lat": 53.55,
+        "lng": 9.99,
+        "summary": [
+            "By 1943 the Allies had adopted area bombing, deliberately targeting residential districts near factories to cripple German industry and morale rather than aiming at single buildings.",
+            "Incendiary bombs dropped on Hamburg in July 1943 ignited a firestorm that tore through the densely built city, killing an estimated 37,000 people in a single raid.",
+            "Hamburg forced Germany to divert aircraft to home air defence rather than the front lines, though it did not break German civilian morale as planners had hoped."
+        ]
+    },
+    {
+        "id": "bombing-of-dresden",
+        "name": "Bombing of Dresden",
+        "dates": "13-15 February 1945",
+        "lat": 51.05,
+        "lng": 13.74,
+        "summary": [
+            "By 1945 Allied air superiority let bombers fly lower and hit targets more accurately, and Dresden, a major rail hub packed with refugees fleeing the Soviets, was selected as a target.",
+            "Four raids over three days dropped incendiary bombs that combined with strong winds into a firestorm, destroying 90% of the city as people fleeing fires suffocated on carbon monoxide.",
+            "Up to 25,000 people died, and Dresden became the defining symbol of controversial 'terror bombing,' with critics arguing the city held little remaining military importance."
+        ]
+    },
+    {
+        "id": "operation-husky",
+        "name": "Operation Husky (Invasion of Sicily)",
+        "dates": "10 July - 17 August 1943",
+        "lat": 37.5,
+        "lng": 14.0,
+        "summary": [
+            "With Stalin demanding a western offensive to relieve pressure on Soviet forces, the Allies chose Sicily as a stepping stone into mainland Italy, close to their North African bases.",
+            "A deception operation planted fake invasion plans on a corpse to convince Germany the real target was Sardinia, while clashing egos between Patton and Montgomery hampered Allied coordination on the ground.",
+            "After 38 days the Allies took Sicily for 25,000 casualties, but 100,000 German troops escaped to the mainland, setting up the harder campaign to come."
+        ]
+    },
+    {
+        "id": "battle-of-monte-cassino",
+        "name": "Battle of Monte Cassino",
+        "dates": "17 January - 18 May 1944",
+        "lat": 41.49,
+        "lng": 13.81,
+        "summary": [
+            "After Mussolini's overthrow, Italy's new government secretly agreed an armistice with the Allies, but Germany rushed in troops and built formidable defensive lines across Italy to fight on regardless.",
+            "Three Allied assaults on the fortified hilltop monastery at Monte Cassino failed in turn, defeated by terrain, a destroyed monastery that gave German defenders better cover, and difficult bombing conditions.",
+            "A fourth, well-coordinated assault with a concentrated artillery barrage finally broke through in May 1944, opening the road to Rome, which fell to the Allies weeks later."
+        ]
+    },
+    {
+        "id": "battle-of-guadalcanal",
+        "name": "Battle of Guadalcanal",
+        "dates": "August 1942 - February 1943",
+        "lat": -9.43,
+        "lng": 160.05,
+        "summary": [
+            "After Japan built an airfield on Guadalcanal threatening supply routes to Australia, the US made capturing it a top priority, launching its first offensive since the victory at Midway.",
+            "US Marines seized the airfield within 36 hours, but six months of brutal land and naval battles followed as both sides fed in reinforcements to the island.",
+            "Japan lost 24,000 men, many to starvation and disease, and never again seriously threatened US positions in the southern Solomons, securing Australia's supply lines for the rest of the war."
+        ]
+    },
+    {
+        "id": "battle-of-iwo-jima",
+        "name": "Battle of Iwo Jima",
+        "dates": "19 February - 26 March 1945",
+        "lat": 24.78,
+        "lng": 141.32,
+        "summary": [
+            "Knowing they were too weak to hold Iwo Jima outright, Japan's garrison built a network of tunnels and fortified beaches, planning to inflict maximum American casualties rather than repel the landing.",
+            "Japanese defenders let US Marines gather on the beaches before opening fire, then used the tunnel network to ambush attackers from behind, fighting to the last man rather than surrender.",
+            "Japan inflicted 26,000 American casualties, more than its own force of 21,000, in what became one of the costliest battles of the Pacific War for the Marines."
+        ]
+    },
+    {
+        "id": "battle-of-okinawa",
+        "name": "Battle of Okinawa",
+        "dates": "1 April - 22 June 1945",
+        "lat": 26.33,
+        "lng": 127.8,
+        "summary": [
+            "Okinawa's airfields and position near southern Japan made it ideal for bombing the mainland and staging a possible invasion, prompting a combined Allied assault by sea, land and air.",
+            "Japan conscripted 40,000 Okinawan civilians into the defence, used others as human shields, and launched over 1,400 kamikaze attacks against the American fleet offshore.",
+            "Around 149,000 Okinawans and up to 117,000 Japanese troops died, convincing Allied planners that invading Japan itself would be catastrophically costly and pushing them toward strategic bombing instead."
+        ]
+    },
+    {
+        "id": "operation-bagration",
+        "name": "Operation Bagration",
+        "dates": "22 June - 19 August 1944",
+        "lat": 53.9,
+        "lng": 27.57,
+        "summary": [
+            "Hitler forbade any retreat and ordered fortified strongholds built in key towns instead of reinforcing the whole front, leaving German lines badly overextended when the Soviets attacked.",
+            "A diversionary attack in Ukraine convinced Germany the main blow was coming from the south, while the real assault tore through the Belorussian corridor using deep armoured thrusts to encircle German forces.",
+            "Germany lost up to 670,000 men in under two months, and the Soviets, now closer to Berlin than the Western Allies who had landed in Normandy two weeks earlier, triggered the Warsaw Uprising."
+        ]
+    },
+    {
+        "id": "d-day-normandy",
+        "name": "D-Day and the Battle of Normandy",
+        "dates": "6 June - 30 August 1944",
+        "lat": 49.34,
+        "lng": -0.68,
+        "summary": [
+            "With Stalin pressing for a western front and Overlord's preparations complete, over 150,000 Allied troops landed across five Normandy beaches on 6 June 1944 after airborne troops secured key targets inland.",
+            "Deception operation Fortitude convinced Hitler the real invasion would hit Pas de Calais, keeping Germany's best panzer divisions away from Normandy while the beachheads, except at costly Omaha, secured quickly.",
+            "By August the Allies had trapped and shattered German forces at the Falaise Gap, liberating Paris and opening the road toward Germany's own border."
+        ]
+    },
+    {
+        "id": "battle-of-the-bulge",
+        "name": "Battle of the Bulge",
+        "dates": "December 1944 - January 1945",
+        "lat": 50.0,
+        "lng": 5.72,
+        "summary": [
+            "With Germany in retreat on every front, Hitler gambled on one last counteroffensive through the Ardennes, hoping a defeat would push America toward seeking peace terms.",
+            "German forces punched into Belgium and briefly pushed the Allies back, but overwhelming Allied troop and material superiority meant it took only about two months to retake the lost ground.",
+            "The failed offensive drained Germany's last reserves of men and armour, and the cautious Allied advance that followed left Berlin itself deliberately out of reach for now."
+        ]
+    },
+    {
+        "id": "battle-of-berlin",
+        "name": "Battle of Berlin",
+        "dates": "16 April - 2 May 1945",
+        "lat": 52.52,
+        "lng": 13.4,
+        "summary": [
+            "By early 1945 the Soviets were advancing an average of 24 kilometres a day through East Prussia, driven partly by fury at the devastation German occupation had left behind.",
+            "Soviet troops launched the final offensive on Berlin on 16 April, losing 30,000 men in three days crossing the Oder River against well-organised German defences before reaching the city itself.",
+            "Hitler committed suicide as Soviet troops closed in, and Germany's unconditional surrender on 7 May 1945 brought the war in Europe to an end."
+        ]
+    },
+    {
+        "id": "firebombing-of-tokyo",
+        "name": "Firebombing of Tokyo (Operation Meetinghouse)",
+        "dates": "9-10 March 1945",
+        "lat": 35.68,
+        "lng": 139.69,
+        "summary": [
+            "After heavy losses at Okinawa, the US chose strategic bombing over a costly land invasion, targeting Japanese factories that had been deliberately built inside residential areas.",
+            "A night raid dropped 1,665 tons of incendiary bombs on Tokyo, and high winds combined with the city's wood-and-paper housing to spread fires uncontrollably through densely packed neighbourhoods.",
+            "The single raid killed 100,000 people and left a million homeless, and continued firebombing killed up to 330,000 Japanese civilians before the war's end."
+        ]
     }
 ]
