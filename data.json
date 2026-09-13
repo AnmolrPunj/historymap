@@ -1,374 +1,398 @@
 [
-    {
-        "id": "shanghai",
-        "name": "Battle of Shanghai",
-        "dates": "13 August – 26 November 1937",
-        "lat": 31.23,
-        "lng": 121.47,
-        "summary": [
-            "Chiang Kai-shek opened a second front in Shanghai after Japan's invasion of northern China, hoping to draw Western sympathy toward China's cause.",
-            "Chinese and Japanese forces fought street by street for three months in China's most modern city, one of the longest urban battles fought anywhere up to that point.",
-            "Japan finally broke through in November 1937, and China's shattered best-trained divisions withdrew toward the capital at Nanjing."
-        ]
-    },
-    {
-        "id": "nanjing",
-        "name": "Fall of Nanjing & Nanjing Massacre",
-        "dates": "1–13 December 1937; massacre continued ~6 weeks",
-        "lat": 32.06,
-        "lng": 118.8,
-        "summary": [
-            "With Shanghai lost and China's army in retreat, Japan pushed on and captured China's capital, Nanjing, within days.",
-            "Over the six weeks that followed, Japanese troops carried out organised mass executions and widespread sexual violence against the city's civilian population.",
-            "The massacre became one of the worst atrocities of the twentieth century and remains a lasting source of tension in Sino-Japanese relations today."
-        ]
-    },
-    {
-        "id": "invasion-of-poland",
-        "name": "Invasion of Poland",
-        "dates": "1 September – 6 October 1939",
-        "lat": 52.23,
-        "lng": 21.01,
-        "summary": [
-            "Hitler's demands over Danzig and the Polish Corridor went unmet, and the Nazi-Soviet Pact removed any risk of Soviet interference.",
-            "Germany invaded on 1 September 1939 using Blitzkrieg tactics, and a Soviet invasion from the east on 17 September sealed Poland's fate.",
-            "Britain and France's declarations of war in response marked the formal start of the Second World War in Europe."
-        ]
-    },
-    {
-        "id": "battle-of-france",
-        "name": "Battle of France",
-        "dates": "10 May – 22 June 1940",
-        "lat": 49.7,
-        "lng": 4.94,
-        "summary": [
-            "Germany's Case Yellow exploited the Allied assumption that the Ardennes forest was impassable to armour.",
-            "A surprise panzer thrust through the Ardennes, launched 10 May 1940, shattered Allied lines and split their armies apart within weeks.",
-            "France fell, most of the British Army was evacuated at Dunkirk, and Britain was left to face Germany alone."
-        ]
-    },
-    {
-        "id": "dunkirk",
-        "name": "Evacuation of Dunkirk (Operation Dynamo)",
-        "dates": "26 May – 4 June 1940",
-        "lat": 51.03,
-        "lng": 2.38,
-        "summary": [
-            "German panzers had trapped roughly 400,000 Allied troops against the Channel coast around Dunkirk.",
-            "Operation Dynamo mobilised naval vessels and hundreds of civilian 'little ships' to evacuate the encircled army under sustained air attack.",
-            "Over 338,000 troops escaped to fight on, though nearly all of the army's heavy equipment had to be abandoned on the beaches."
-        ]
-    },
-    {
-        "id": "battle-of-britain",
-        "name": "Battle of Britain",
-        "dates": "10 July – 31 October 1940",
-        "lat": 51.25,
-        "lng": 0.5,
-        "summary": [
-            "With France defeated, Germany needed to destroy the RAF to clear the way for a planned invasion of Britain.",
-            "Despite being outnumbered, RAF Fighter Command used radar and coordinated defence to inflict unsustainable losses on the Luftwaffe through the summer of 1940.",
-            "Hitler postponed the invasion indefinitely on 17 September 1940, Germany's first major defeat of the war."
-        ]
-    },
-    {
-        "id": "operation-barbarossa",
-        "name": "Operation Barbarossa",
-        "dates": "22 June – 5 December 1941",
-        "lat": 52.1,
-        "lng": 23.7,
-        "summary": [
-            "Hitler viewed war with the Soviet Union as inevitable, and Stalin refused to believe an invasion was imminent.",
-            "Three million German and Axis troops invaded on 22 June 1941 across a 2,900km front, encircling millions of Soviet troops in massive 'cauldron' battles.",
-            "The advance stalled outside Moscow, Leningrad and Rostov by December 1941, trapping Germany in a prolonged two-front war it could not sustain."
-        ]
-    },
-    {
-        "id": "pearl-harbor",
-        "name": "Attack on Pearl Harbor",
-        "dates": "7 December 1941",
-        "lat": 21.37,
-        "lng": -157.95,
-        "summary": [
-            "Japan needed to remove the US Pacific Fleet as an obstacle to its planned expansion into Southeast Asia.",
-            "A surprise carrier-launched strike on 7 December 1941 crippled the battleships moored at Pearl Harbor, though the fleet's aircraft carriers were untouched at sea.",
-            "Rather than seeking peace, the United States declared war the next day, bringing it fully into the Second World War."
-        ]
-    },
-    {
-        "id": "malaya",
-        "name": "Invasion of Malaya",
-        "dates": "8 December 1941 – 31 January 1942",
-        "lat": 6.13,
-        "lng": 102.24,
-        "summary": [
-            "Japan needed Malaya's tin and rubber, and the peninsula was the most direct overland route to Singapore.",
-            "A smaller but far more experienced Japanese force used bicycle infantry and coastal landings to repeatedly outflank Commonwealth defenders from 8 December 1941.",
-            "By 31 January 1942, the last Commonwealth troops had withdrawn across the causeway into Singapore, which engineers then demolished behind them."
-        ]
-    },
-    {
-        "id": "singapore",
-        "name": "Fall of Singapore",
-        "dates": "8–15 February 1942",
-        "lat": 1.35,
-        "lng": 103.82,
-        "summary": [
-            "Britain's pre-war Singapore Strategy assumed a relocated Royal Navy fleet could always defend the island, but no such fleet was available by 1942.",
-            "General Percival misjudged the main Japanese axis of attack, and the garrison collapsed within a week of the assault beginning on 8 February 1942.",
-            "Percival's surrender on 15 February was Britain's largest capitulation in military history, and it pushed Australia toward closer alignment with the United States."
-        ]
-    },
-    {
-        "id": "leningrad",
-        "name": "Siege of Leningrad",
-        "dates": "8 September 1941 – 27 January 1944",
-        "lat": 59.94,
-        "lng": 30.31,
-        "summary": [
-            "Leningrad was a primary objective of Army Group North, but Hitler chose to starve the city rather than commit troops to capturing it outright.",
-            "Civilians endured more than two years of shelling and starvation, with rations falling as low as 125 grams of bread a day.",
-            "A Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died."
-        ]
-    },
-    {
-        "id": "pow-experiences",
-        "name": "The Prisoner of War Experience Under Japan",
-        "dates": "1941–1945",
-        "lat": null,
-        "lng": null,
-        "summary": [
-            "Japan signed but never ratified the 1929 Geneva Convention, and its military culture treated surrender as shameful, leaving captured troops with no legal or cultural protection.",
-            "Roughly 180,000 Allied POWs and vastly more Asian forced labourers passed through Japanese captivity, used predominantly as labour on projects like the Thai-Burma Railway.",
-            "About 27% of Allied POWs held by Japan died in captivity, compared to 3.6% under Germany and Italy, one of the starkest disparities of the entire war."
-        ]
-    },
-    {
-        "id": "battle-of-coral-sea",
-        "name": "Battle of the Coral Sea",
-        "dates": "4-8 May 1942",
-        "lat": -15.0,
-        "lng": 155.0,
-        "summary": [
-            "Japan launched Operation MO to invade Port Moresby and the Solomon Islands, aiming to cut supply routes between Australia and the US and secure its new defensive perimeter.",
-            "Having broken Japan's naval code, the US intercepted the invasion force for history's first carrier battle fought entirely by aircraft, with the opposing ships never sighting each other.",
-            "Japan sank more tonnage and lost only the carrier Shoho, but the Port Moresby invasion was turned back and two more Japanese carriers were left unavailable for Midway a month later."
-        ]
-    },
-    {
-        "id": "battle-of-midway",
-        "name": "Battle of Midway",
-        "dates": "4-7 June 1942",
-        "lat": 28.2,
-        "lng": -177.35,
-        "summary": [
-            "Yamamoto planned to lure and destroy America's remaining carriers at Midway, but American codebreakers had already identified the target and prepared an ambush.",
-            "On 4 June 1942, American dive bombers caught Japan's carriers mid-refuelling and destroyed three of its four fleet carriers within minutes; the fourth was sunk hours later.",
-            "Japan permanently lost its offensive initiative in the Pacific, and its irreplaceable losses in ships, aircraft and experienced pilots marked the war's decisive turning point."
-        ]
-    },
-    {
-        "id": "battle-of-stalingrad",
-        "name": "Battle of Stalingrad",
-        "dates": "July 1942 - February 1943",
-        "lat": 48.71,
-        "lng": 44.51,
-        "summary": [
-            "Hitler split his 1942 summer offensive between Stalingrad and the Caucasus oil fields, drawn to the city by its industry, its Volga supply route, and the propaganda value of capturing a city bearing Stalin's name.",
-            "Denied permission to evacuate, Stalingrad's population was mobilised into the defence as fighting collapsed into brutal house-by-house combat, until a Soviet encirclement in November 1942 trapped Germany's entire Sixth Army inside the city.",
-            "Hitler refused any breakout or surrender, and when the trapped army finally capitulated in February 1943, Germany had suffered its first major defeat of the war and lost an army it could never replace."
-        ]
-    },
-    {
-        "id": "battle-of-kursk",
-        "name": "Battle of Kursk",
-        "dates": "5 July - 23 August 1943",
-        "lat": 51.73,
-        "lng": 36.19,
-        "summary": [
-            "Still fielding over 3 million men despite Stalingrad's losses, Hitler ordered a strike at the Kursk salient, hoping to trap five Soviet armies and buy time to rebuild his depleted eastern forces.",
-            "Soviet intelligence, aided by Britain's cracked Enigma decrypts, knew the German plan in advance and built a defence in depth that turned the assault into the largest tank battle in history.",
-            "The German offensive stalled within a week, and the Soviet counterattack that followed pushed Germany permanently onto the defensive, having launched its last major offensive of the war on the Eastern Front."
-        ]
-    },
-    {
-        "id": "battle-of-el-alamein",
-        "name": "Battle of El Alamein",
-        "dates": "July - November 1942",
-        "lat": 30.83,
-        "lng": 28.95,
-        "summary": [
-            "Italy's disastrous 1940 invasion of Egypt forced Germany to send Rommel's Afrika Korps to North Africa, beginning two years of seesaw desert warfare over the Suez Canal and Middle Eastern oil.",
-            "Rommel's advance was finally checked at El Alamein, the one stretch of desert that couldn't be outflanked, and in October 1942 Montgomery's Eighth Army broke the German line after ten days of fighting.",
-            "Rommel's retreat became a rout all the way to Tunisia, and El Alamein is remembered as the moment the tide in North Africa turned decisively in the Allies' favour."
-        ]
-    },
-    {
-        "id": "operation-torch",
-        "name": "Operation Torch",
-        "dates": "8 November 1942 - 13 May 1943",
-        "lat": 36.75,
-        "lng": 3.06,
-        "summary": [
-            "With Rommel already retreating after El Alamein, the Allies opened a second North African front, landing British and American troops in French Morocco and Algeria on 8 November 1942.",
-            "Vichy French resistance collapsed into a ceasefire within days, letting Allied forces push into Tunisia, where reinforced German troops mounted a stubborn defence around Kasserine Pass.",
-            "Trapped between two advancing Allied armies, around 250,000 Axis troops surrendered in May 1943, ending the North Africa campaign and clearing the way for the invasion of Italy two months later."
-        ]
-    },
-    {
-        "id": "the-blitz",
-        "name": "The Blitz",
-        "dates": "September 1940 - May 1941",
-        "lat": 51.51,
-        "lng": -0.13,
-        "summary": [
-            "After abandoning Operation Sea Lion, Hitler switched to bombing British industrial cities at night, hoping to terrorise the population into seeking peace.",
-            "Nightly raids targeted London, Birmingham, Coventry, Plymouth and Southampton, and incendiary bombs sparked firestorms including the 'Second Great Fire of London' in December 1940.",
-            "The bombing killed over 43,500 civilians but failed to break British morale, instead creating a defiant 'Blitz Spirit' while costing Germany thousands of aircrew it could not spare."
-        ]
-    },
-    {
-        "id": "bombing-of-hamburg",
-        "name": "Bombing of Hamburg (Operation Gomorrah)",
-        "dates": "July 1943",
-        "lat": 53.55,
-        "lng": 9.99,
-        "summary": [
-            "By 1943 the Allies had adopted area bombing, deliberately targeting residential districts near factories to cripple German industry and morale rather than aiming at single buildings.",
-            "Incendiary bombs dropped on Hamburg in July 1943 ignited a firestorm that tore through the densely built city, killing an estimated 37,000 people in a single raid.",
-            "Hamburg forced Germany to divert aircraft to home air defence rather than the front lines, though it did not break German civilian morale as planners had hoped."
-        ]
-    },
-    {
-        "id": "bombing-of-dresden",
-        "name": "Bombing of Dresden",
-        "dates": "13-15 February 1945",
-        "lat": 51.05,
-        "lng": 13.74,
-        "summary": [
-            "By 1945 Allied air superiority let bombers fly lower and hit targets more accurately, and Dresden, a major rail hub packed with refugees fleeing the Soviets, was selected as a target.",
-            "Four raids over three days dropped incendiary bombs that combined with strong winds into a firestorm, destroying 90% of the city as people fleeing fires suffocated on carbon monoxide.",
-            "Up to 25,000 people died, and Dresden became the defining symbol of controversial 'terror bombing,' with critics arguing the city held little remaining military importance."
-        ]
-    },
-    {
-        "id": "operation-husky",
-        "name": "Operation Husky (Invasion of Sicily)",
-        "dates": "10 July - 17 August 1943",
-        "lat": 37.5,
-        "lng": 14.0,
-        "summary": [
-            "With Stalin demanding a western offensive to relieve pressure on Soviet forces, the Allies chose Sicily as a stepping stone into mainland Italy, close to their North African bases.",
-            "A deception operation planted fake invasion plans on a corpse to convince Germany the real target was Sardinia, while clashing egos between Patton and Montgomery hampered Allied coordination on the ground.",
-            "After 38 days the Allies took Sicily for 25,000 casualties, but 100,000 German troops escaped to the mainland, setting up the harder campaign to come."
-        ]
-    },
-    {
-        "id": "battle-of-monte-cassino",
-        "name": "Battle of Monte Cassino",
-        "dates": "17 January - 18 May 1944",
-        "lat": 41.49,
-        "lng": 13.81,
-        "summary": [
-            "After Mussolini's overthrow, Italy's new government secretly agreed an armistice with the Allies, but Germany rushed in troops and built formidable defensive lines across Italy to fight on regardless.",
-            "Three Allied assaults on the fortified hilltop monastery at Monte Cassino failed in turn, defeated by terrain, a destroyed monastery that gave German defenders better cover, and difficult bombing conditions.",
-            "A fourth, well-coordinated assault with a concentrated artillery barrage finally broke through in May 1944, opening the road to Rome, which fell to the Allies weeks later."
-        ]
-    },
-    {
-        "id": "battle-of-guadalcanal",
-        "name": "Battle of Guadalcanal",
-        "dates": "August 1942 - February 1943",
-        "lat": -9.43,
-        "lng": 160.05,
-        "summary": [
-            "After Japan built an airfield on Guadalcanal threatening supply routes to Australia, the US made capturing it a top priority, launching its first offensive since the victory at Midway.",
-            "US Marines seized the airfield within 36 hours, but six months of brutal land and naval battles followed as both sides fed in reinforcements to the island.",
-            "Japan lost 24,000 men, many to starvation and disease, and never again seriously threatened US positions in the southern Solomons, securing Australia's supply lines for the rest of the war."
-        ]
-    },
-    {
-        "id": "battle-of-iwo-jima",
-        "name": "Battle of Iwo Jima",
-        "dates": "19 February - 26 March 1945",
-        "lat": 24.78,
-        "lng": 141.32,
-        "summary": [
-            "Knowing they were too weak to hold Iwo Jima outright, Japan's garrison built a network of tunnels and fortified beaches, planning to inflict maximum American casualties rather than repel the landing.",
-            "Japanese defenders let US Marines gather on the beaches before opening fire, then used the tunnel network to ambush attackers from behind, fighting to the last man rather than surrender.",
-            "Japan inflicted 26,000 American casualties, more than its own force of 21,000, in what became one of the costliest battles of the Pacific War for the Marines."
-        ]
-    },
-    {
-        "id": "battle-of-okinawa",
-        "name": "Battle of Okinawa",
-        "dates": "1 April - 22 June 1945",
-        "lat": 26.33,
-        "lng": 127.8,
-        "summary": [
-            "Okinawa's airfields and position near southern Japan made it ideal for bombing the mainland and staging a possible invasion, prompting a combined Allied assault by sea, land and air.",
-            "Japan conscripted 40,000 Okinawan civilians into the defence, used others as human shields, and launched over 1,400 kamikaze attacks against the American fleet offshore.",
-            "Around 149,000 Okinawans and up to 117,000 Japanese troops died, convincing Allied planners that invading Japan itself would be catastrophically costly and pushing them toward strategic bombing instead."
-        ]
-    },
-    {
-        "id": "operation-bagration",
-        "name": "Operation Bagration",
-        "dates": "22 June - 19 August 1944",
-        "lat": 53.9,
-        "lng": 27.57,
-        "summary": [
-            "Hitler forbade any retreat and ordered fortified strongholds built in key towns instead of reinforcing the whole front, leaving German lines badly overextended when the Soviets attacked.",
-            "A diversionary attack in Ukraine convinced Germany the main blow was coming from the south, while the real assault tore through the Belorussian corridor using deep armoured thrusts to encircle German forces.",
-            "Germany lost up to 670,000 men in under two months, and the Soviets, now closer to Berlin than the Western Allies who had landed in Normandy two weeks earlier, triggered the Warsaw Uprising."
-        ]
-    },
-    {
-        "id": "d-day-normandy",
-        "name": "D-Day and the Battle of Normandy",
-        "dates": "6 June - 30 August 1944",
-        "lat": 49.34,
-        "lng": -0.68,
-        "summary": [
-            "With Stalin pressing for a western front and Overlord's preparations complete, over 150,000 Allied troops landed across five Normandy beaches on 6 June 1944 after airborne troops secured key targets inland.",
-            "Deception operation Fortitude convinced Hitler the real invasion would hit Pas de Calais, keeping Germany's best panzer divisions away from Normandy while the beachheads, except at costly Omaha, secured quickly.",
-            "By August the Allies had trapped and shattered German forces at the Falaise Gap, liberating Paris and opening the road toward Germany's own border."
-        ]
-    },
-    {
-        "id": "battle-of-the-bulge",
-        "name": "Battle of the Bulge",
-        "dates": "December 1944 - January 1945",
-        "lat": 50.0,
-        "lng": 5.72,
-        "summary": [
-            "With Germany in retreat on every front, Hitler gambled on one last counteroffensive through the Ardennes, hoping a defeat would push America toward seeking peace terms.",
-            "German forces punched into Belgium and briefly pushed the Allies back, but overwhelming Allied troop and material superiority meant it took only about two months to retake the lost ground.",
-            "The failed offensive drained Germany's last reserves of men and armour, and the cautious Allied advance that followed left Berlin itself deliberately out of reach for now."
-        ]
-    },
-    {
-        "id": "battle-of-berlin",
-        "name": "Battle of Berlin",
-        "dates": "16 April - 2 May 1945",
-        "lat": 52.52,
-        "lng": 13.4,
-        "summary": [
-            "By early 1945 the Soviets were advancing an average of 24 kilometres a day through East Prussia, driven partly by fury at the devastation German occupation had left behind.",
-            "Soviet troops launched the final offensive on Berlin on 16 April, losing 30,000 men in three days crossing the Oder River against well-organised German defences before reaching the city itself.",
-            "Hitler committed suicide as Soviet troops closed in, and Germany's unconditional surrender on 7 May 1945 brought the war in Europe to an end."
-        ]
-    },
-    {
-        "id": "firebombing-of-tokyo",
-        "name": "Firebombing of Tokyo (Operation Meetinghouse)",
-        "dates": "9-10 March 1945",
-        "lat": 35.68,
-        "lng": 139.69,
-        "summary": [
-            "After heavy losses at Okinawa, the US chose strategic bombing over a costly land invasion, targeting Japanese factories that had been deliberately built inside residential areas.",
-            "A night raid dropped 1,665 tons of incendiary bombs on Tokyo, and high winds combined with the city's wood-and-paper housing to spread fires uncontrollably through densely packed neighbourhoods.",
-            "The single raid killed 100,000 people and left a million homeless, and continued firebombing killed up to 330,000 Japanese civilians before the war's end."
-        ]
-    }
+  {
+    "id": "shanghai",
+    "name": "Battle of Shanghai",
+    "dates": "13 August – 26 November 1937",
+    "lat": 31.23,
+    "lng": 121.47,
+    "summary": [
+      "Chiang Kai-shek opened a second front in Shanghai after Japan's invasion of northern China, hoping to draw Western sympathy toward China's cause.",
+      "Chinese and Japanese forces fought street by street for more than three months in China's most modern city, one of the longest urban battles fought anywhere up to that point.",
+      "Japan finally broke through in November 1937, and China's shattered best-trained divisions withdrew toward the capital at Nanjing."
+    ]
+  },
+  {
+    "id": "nanjing",
+    "name": "Fall of Nanjing & Nanjing Massacre",
+    "dates": "1–13 December 1937; massacre continued ~6 weeks",
+    "lat": 32.06,
+    "lng": 118.8,
+    "summary": [
+      "With Shanghai lost and China's army in retreat, Japan pushed on and captured China's capital, Nanjing, within days.",
+      "Over the six weeks that followed, Japanese troops carried out organised mass executions and widespread sexual violence against the city's civilian population.",
+      "The massacre became one of the worst atrocities of the twentieth century and remains a lasting source of tension in Sino-Japanese relations today."
+    ]
+  },
+  {
+    "id": "invasion-of-poland",
+    "name": "Invasion of Poland",
+    "dates": "1 September – 6 October 1939",
+    "lat": 52.23,
+    "lng": 21.01,
+    "summary": [
+      "Hitler's demands over Danzig and the Polish Corridor went unmet, and the Nazi-Soviet Pact removed any risk of Soviet interference.",
+      "Germany invaded on 1 September 1939 using Blitzkrieg tactics, and a Soviet invasion from the east on 17 September sealed Poland's fate.",
+      "Britain and France's declarations of war in response marked the formal start of the Second World War in Europe."
+    ]
+  },
+  {
+    "id": "battle-of-france",
+    "name": "Battle of France",
+    "dates": "10 May – 22 June 1940",
+    "lat": 49.7,
+    "lng": 4.94,
+    "summary": [
+      "Germany's Case Yellow exploited the Allied assumption that the Ardennes forest was impassable to armour.",
+      "A surprise panzer thrust through the Ardennes, launched 10 May 1940, shattered Allied lines and split their armies apart within weeks.",
+      "France fell, most of the British Army was evacuated at Dunkirk, and Britain was left to face Germany alone."
+    ]
+  },
+  {
+    "id": "dunkirk",
+    "name": "Evacuation of Dunkirk (Operation Dynamo)",
+    "dates": "26 May – 4 June 1940",
+    "lat": 51.03,
+    "lng": 2.38,
+    "summary": [
+      "German panzers had trapped roughly 400,000 Allied troops against the Channel coast around Dunkirk.",
+      "Operation Dynamo mobilised naval vessels and hundreds of civilian 'little ships' to evacuate the encircled army under sustained air attack.",
+      "Over 338,000 troops escaped to fight on, though nearly all of the army's heavy equipment had to be abandoned on the beaches."
+    ]
+  },
+  {
+    "id": "battle-of-britain",
+    "name": "Battle of Britain",
+    "dates": "10 July – 31 October 1940",
+    "lat": 51.25,
+    "lng": 0.5,
+    "summary": [
+      "With France defeated, Germany needed to destroy the RAF to clear the way for a planned invasion of Britain.",
+      "Despite being outnumbered, RAF Fighter Command used radar and coordinated defence to inflict unsustainable losses on the Luftwaffe through the summer of 1940.",
+      "Hitler postponed the invasion indefinitely on 17 September 1940, Germany's first major defeat of the war."
+    ]
+  },
+  {
+    "id": "operation-barbarossa",
+    "name": "Operation Barbarossa",
+    "dates": "22 June – 5 December 1941",
+    "lat": 52.1,
+    "lng": 23.7,
+    "summary": [
+      "Hitler viewed war with the Soviet Union as inevitable, and Stalin refused to believe an invasion was imminent.",
+      "Three million German and Axis troops invaded on 22 June 1941 across a 2,900km front, encircling millions of Soviet troops in massive 'cauldron' battles.",
+      "The advance stalled outside Moscow, Leningrad and Rostov by December 1941, trapping Germany in a prolonged two-front war it could not sustain."
+    ]
+  },
+  {
+    "id": "pearl-harbor",
+    "name": "Attack on Pearl Harbor",
+    "dates": "7 December 1941",
+    "lat": 21.37,
+    "lng": -157.95,
+    "summary": [
+      "Japan needed to remove the US Pacific Fleet as an obstacle to its planned expansion into Southeast Asia.",
+      "A surprise carrier-launched strike on 7 December 1941 crippled the battleships moored at Pearl Harbor, though the fleet's aircraft carriers were untouched at sea.",
+      "Rather than seeking peace, the United States declared war the next day, bringing it fully into the Second World War."
+    ]
+  },
+  {
+    "id": "malaya",
+    "name": "Invasion of Malaya",
+    "dates": "8 December 1941 – 31 January 1942",
+    "lat": 6.13,
+    "lng": 102.24,
+    "summary": [
+      "Japan needed Malaya's tin and rubber, and the peninsula was the most direct overland route to Singapore.",
+      "A smaller but far more experienced Japanese force used bicycle infantry and coastal landings to repeatedly outflank Commonwealth defenders from 8 December 1941.",
+      "By 31 January 1942, the last Commonwealth troops had withdrawn across the causeway into Singapore, which engineers then demolished behind them."
+    ]
+  },
+  {
+    "id": "singapore",
+    "name": "Fall of Singapore",
+    "dates": "8–15 February 1942",
+    "lat": 1.35,
+    "lng": 103.82,
+    "summary": [
+      "Britain's pre-war Singapore Strategy assumed a relocated Royal Navy fleet could always defend the island, but no such fleet was available by 1942.",
+      "General Percival misjudged the main Japanese axis of attack, and the garrison collapsed within a week of the assault beginning on 8 February 1942.",
+      "Percival's surrender on 15 February was Britain's largest capitulation in military history, and it pushed Australia toward closer alignment with the United States."
+    ]
+  },
+  {
+    "id": "bombing-of-darwin",
+    "name": "Bombing of Darwin",
+    "dates": "19 February 1942",
+    "lat": -12.46,
+    "lng": 130.84,
+    "summary": [
+      "Four days after Singapore fell, the same Japanese carrier force that had struck Pearl Harbor turned on Darwin, the Allied base closest to the fighting in the Netherlands East Indies.",
+      "Two raids on the morning of 19 February 1942 — 188 carrier aircraft, then 54 land-based bombers — sank eight ships in the harbour, wrecked the town and its airfield, and killed at least 235 people.",
+      "It was the first and heaviest of 64 raids on Darwin and the largest attack ever made on Australian soil, and the government's decision to play down the toll shaped how Australians remembered it for decades."
+    ]
+  },
+  {
+    "id": "leningrad",
+    "name": "Siege of Leningrad",
+    "dates": "8 September 1941 – 27 January 1944",
+    "lat": 59.94,
+    "lng": 30.31,
+    "summary": [
+      "Leningrad was a primary objective of Army Group North, but Hitler chose to starve the city rather than commit troops to capturing it outright.",
+      "Civilians endured more than two years of shelling and starvation, with rations falling as low as 125 grams of bread a day.",
+      "A Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died."
+    ]
+  },
+  {
+    "id": "pow-experiences",
+    "name": "The Prisoner of War Experience Under Japan",
+    "dates": "1941–1945",
+    "lat": 14.36,
+    "lng": 98.94,
+    "summary": [
+      "Japan signed but never ratified the 1929 Geneva Convention, and its military culture treated surrender as shameful, leaving captured troops with no legal or cultural protection.",
+      "Roughly 140,000 Western Allied POWs and vastly more Asian forced labourers passed through Japanese captivity, used predominantly as labour on projects like the Thai-Burma Railway.",
+      "About 27% of Allied POWs held by Japan died in captivity, compared to 3.6% under Germany and Italy, one of the starkest disparities of the entire war."
+    ]
+  },
+  {
+    "id": "battle-of-coral-sea",
+    "name": "Battle of the Coral Sea",
+    "dates": "4-8 May 1942",
+    "lat": -15.0,
+    "lng": 155.0,
+    "summary": [
+      "Japan launched Operation MO to invade Port Moresby and the Solomon Islands, aiming to cut supply routes between Australia and the US and secure its new defensive perimeter.",
+      "Having broken Japan's naval code, the US intercepted the invasion force for history's first carrier battle fought entirely by aircraft, with the opposing ships never sighting each other.",
+      "Japan sank more tonnage and lost only the carrier Shoho, but the Port Moresby invasion was turned back and two more Japanese carriers were left unavailable for Midway a month later."
+    ]
+  },
+  {
+    "id": "kokoda-track",
+    "name": "Kokoda Track Campaign",
+    "dates": "21 July – 16 November 1942",
+    "lat": -8.88,
+    "lng": 147.74,
+    "summary": [
+      "Blocked at sea by the Battle of the Coral Sea, Japan landed troops at Gona and Buna in July 1942 and sent them over the Owen Stanley Range to take Port Moresby by land.",
+      "Outnumbered Australian militia and then AIF battalions fought a series of desperate rearguard actions along the mountain track — Kokoda, Isurava, Brigade Hill — before the Japanese advance stalled at Ioribaiwa, within sight of the coast.",
+      "Ordered to withdraw as Guadalcanal drained Japan's resources, the exhausted Japanese force was pursued back over the mountains, and Australian troops retook Kokoda on 2 November 1942."
+    ]
+  },
+  {
+    "id": "battle-of-midway",
+    "name": "Battle of Midway",
+    "dates": "4-7 June 1942",
+    "lat": 28.2,
+    "lng": -177.35,
+    "summary": [
+      "Yamamoto planned to lure and destroy America's remaining carriers at Midway, but American codebreakers had already identified the target and prepared an ambush.",
+      "On 4 June 1942, American dive bombers caught Japan's carriers mid-refuelling and destroyed three of its four fleet carriers within minutes; the fourth was sunk hours later.",
+      "Japan permanently lost its offensive initiative in the Pacific, and its irreplaceable losses in ships, aircraft and experienced pilots marked the war's decisive turning point."
+    ]
+  },
+  {
+    "id": "battle-of-stalingrad",
+    "name": "Battle of Stalingrad",
+    "dates": "July 1942 - February 1943",
+    "lat": 48.71,
+    "lng": 44.51,
+    "summary": [
+      "Hitler split his 1942 summer offensive between Stalingrad and the Caucasus oil fields, drawn to the city by its industry, its Volga supply route, and the propaganda value of capturing a city bearing Stalin's name.",
+      "Denied permission to evacuate, Stalingrad's population was mobilised into the defence as fighting collapsed into brutal house-by-house combat, until a Soviet encirclement in November 1942 trapped Germany's entire Sixth Army inside the city.",
+      "Hitler refused any breakout or surrender, and when the trapped army finally capitulated in February 1943, Germany had suffered its most catastrophic defeat of the war so far and lost an entire army it could never replace."
+    ]
+  },
+  {
+    "id": "battle-of-kursk",
+    "name": "Battle of Kursk",
+    "dates": "5 July - 23 August 1943",
+    "lat": 51.73,
+    "lng": 36.19,
+    "summary": [
+      "Still fielding over 3 million men despite Stalingrad's losses, Hitler ordered a strike at the Kursk salient, hoping to trap five Soviet armies and buy time to rebuild his depleted eastern forces.",
+      "Soviet intelligence, aided by Britain's cracked Enigma decrypts, knew the German plan in advance and built a defence in depth that turned the assault into the largest tank battle in history.",
+      "The German offensive stalled within a week, and the Soviet counterattack that followed pushed Germany permanently onto the defensive, having launched its last major offensive of the war on the Eastern Front."
+    ]
+  },
+  {
+    "id": "battle-of-el-alamein",
+    "name": "Battle of El Alamein",
+    "dates": "July - November 1942",
+    "lat": 30.83,
+    "lng": 28.95,
+    "summary": [
+      "Italy's disastrous 1940 invasion of Egypt forced Germany to send Rommel's Afrika Korps to North Africa, beginning two years of seesaw desert warfare over the Suez Canal and Middle Eastern oil.",
+      "Rommel's advance was finally checked at El Alamein, the one stretch of desert that couldn't be outflanked, and in October 1942 Montgomery's Eighth Army broke the German line after ten days of fighting.",
+      "Rommel's retreat became a rout all the way to Tunisia, and El Alamein is remembered as the moment the tide in North Africa turned decisively in the Allies' favour."
+    ]
+  },
+  {
+    "id": "operation-torch",
+    "name": "Operation Torch and the Tunisia Campaign",
+    "dates": "8 November 1942 - 13 May 1943",
+    "lat": 36.75,
+    "lng": 3.06,
+    "summary": [
+      "With Rommel already retreating after El Alamein, the Allies opened a second North African front, landing British and American troops in French Morocco and Algeria on 8 November 1942.",
+      "Vichy French resistance collapsed into a ceasefire within days, letting Allied forces push into Tunisia, where reinforced German troops mounted a stubborn defence around Kasserine Pass.",
+      "Trapped between two advancing Allied armies, around 250,000 Axis troops surrendered in May 1943, ending the North Africa campaign and clearing the way for the invasion of Italy two months later."
+    ]
+  },
+  {
+    "id": "the-blitz",
+    "name": "The Blitz",
+    "dates": "September 1940 - May 1941",
+    "lat": 51.51,
+    "lng": -0.13,
+    "summary": [
+      "After abandoning Operation Sea Lion, Hitler switched to bombing British industrial cities at night, hoping to terrorise the population into seeking peace.",
+      "Nightly raids targeted London, Birmingham, Coventry, Plymouth and Southampton, and incendiary bombs sparked firestorms including the 'Second Great Fire of London' in December 1940.",
+      "The bombing killed over 43,500 civilians but failed to break British morale, instead creating a defiant 'Blitz Spirit' while costing Germany thousands of aircrew it could not spare."
+    ]
+  },
+  {
+    "id": "bombing-of-hamburg",
+    "name": "Bombing of Hamburg (Operation Gomorrah)",
+    "dates": "July 1943",
+    "lat": 53.55,
+    "lng": 9.99,
+    "summary": [
+      "By 1943 the Allies had adopted area bombing, deliberately targeting residential districts near factories to cripple German industry and morale rather than aiming at single buildings.",
+      "Incendiary bombs dropped on Hamburg in July 1943 ignited a firestorm that tore through the densely built city, killing an estimated 37,000 people in a single raid.",
+      "Hamburg forced Germany to divert aircraft to home air defence rather than the front lines, though it did not break German civilian morale as planners had hoped."
+    ]
+  },
+  {
+    "id": "bombing-of-dresden",
+    "name": "Bombing of Dresden",
+    "dates": "13-15 February 1945",
+    "lat": 51.05,
+    "lng": 13.74,
+    "summary": [
+      "By 1945 Allied air superiority let bombers fly lower and hit targets more accurately, and Dresden, a major rail hub packed with refugees fleeing the Soviets, was selected as a target.",
+      "Four raids over three days dropped incendiary bombs that combined with strong winds into a firestorm, destroying around 90% of the city centre as people sheltering from the fires suffocated.",
+      "Up to 25,000 people died, and Dresden became the defining symbol of controversial 'terror bombing,' with critics arguing the city held little remaining military importance."
+    ]
+  },
+  {
+    "id": "operation-husky",
+    "name": "Operation Husky (Invasion of Sicily)",
+    "dates": "10 July - 17 August 1943",
+    "lat": 37.5,
+    "lng": 14.0,
+    "summary": [
+      "With Stalin demanding a western offensive to relieve pressure on Soviet forces, the Allies chose Sicily as a stepping stone into mainland Italy, close to their North African bases.",
+      "A deception operation planted fake invasion plans on a corpse to convince Germany the real target was Sardinia, while clashing egos between Patton and Montgomery hampered Allied coordination on the ground.",
+      "After 38 days the Allies took Sicily for 25,000 casualties, but roughly 40,000 German and 60,000 Italian troops escaped across the Strait of Messina, setting up the harder campaign to come."
+    ]
+  },
+  {
+    "id": "battle-of-monte-cassino",
+    "name": "Battle of Monte Cassino",
+    "dates": "17 January - 18 May 1944",
+    "lat": 41.49,
+    "lng": 13.81,
+    "summary": [
+      "After Mussolini's overthrow, Italy's new government secretly agreed an armistice with the Allies, but Germany rushed in troops and built formidable defensive lines across Italy to fight on regardless.",
+      "Three Allied assaults on the fortified hilltop monastery at Monte Cassino failed in turn, defeated by terrain, a destroyed monastery that gave German defenders better cover, and difficult bombing conditions.",
+      "A fourth, well-coordinated assault with a concentrated artillery barrage finally broke through in May 1944, opening the road to Rome, which fell to the Allies weeks later."
+    ]
+  },
+  {
+    "id": "battle-of-guadalcanal",
+    "name": "Battle of Guadalcanal",
+    "dates": "August 1942 - February 1943",
+    "lat": -9.43,
+    "lng": 160.05,
+    "summary": [
+      "After Japan built an airfield on Guadalcanal threatening supply routes to Australia, the US made capturing it a top priority, launching its first offensive since the victory at Midway.",
+      "US Marines seized the airfield within 36 hours, but six months of brutal land and naval battles followed as both sides fed in reinforcements to the island.",
+      "Japan lost 24,000 men, many to starvation and disease, and never again seriously threatened US positions in the southern Solomons, securing Australia's supply lines for the rest of the war."
+    ]
+  },
+  {
+    "id": "battle-of-iwo-jima",
+    "name": "Battle of Iwo Jima",
+    "dates": "19 February - 26 March 1945",
+    "lat": 24.78,
+    "lng": 141.32,
+    "summary": [
+      "Knowing they were too weak to hold Iwo Jima outright, Japan's garrison built a network of tunnels and fortified beaches, planning to inflict maximum American casualties rather than repel the landing.",
+      "Japanese defenders let US Marines gather on the beaches before opening fire, then used the tunnel network to ambush attackers from behind, fighting to the last man rather than surrender.",
+      "Japan inflicted 26,000 American casualties, more than its own force of 21,000, in what became one of the costliest battles of the Pacific War for the Marines."
+    ]
+  },
+  {
+    "id": "battle-of-okinawa",
+    "name": "Battle of Okinawa",
+    "dates": "1 April - 22 June 1945",
+    "lat": 26.33,
+    "lng": 127.8,
+    "summary": [
+      "Okinawa's airfields and position near southern Japan made it ideal for bombing the mainland and staging a possible invasion, prompting a combined Allied assault by sea, land and air.",
+      "Japan conscripted 40,000 Okinawan civilians into the defence, used others as human shields, and launched over 1,400 kamikaze attacks against the American fleet offshore.",
+      "Around 149,000 Okinawans and up to 117,000 Japanese troops died, convincing Allied planners that invading Japan itself would be catastrophically costly — a calculation that weighed heavily on the decision to use the atomic bombs."
+    ]
+  },
+  {
+    "id": "operation-bagration",
+    "name": "Operation Bagration",
+    "dates": "22 June - 19 August 1944",
+    "lat": 53.9,
+    "lng": 27.57,
+    "summary": [
+      "Hitler forbade any retreat and ordered fortified strongholds built in key towns instead of reinforcing the whole front, leaving German lines badly overextended when the Soviets attacked.",
+      "A diversionary attack in Ukraine convinced Germany the main blow was coming from the south, while the real assault tore through the Belorussian corridor using deep armoured thrusts to encircle German forces.",
+      "Germany lost up to 670,000 men in under two months, and the Soviets, now closer to Berlin than the Western Allies who had landed in Normandy two weeks earlier, triggered the Warsaw Uprising."
+    ]
+  },
+  {
+    "id": "d-day-normandy",
+    "name": "D-Day and the Battle of Normandy",
+    "dates": "6 June - 30 August 1944",
+    "lat": 49.34,
+    "lng": -0.68,
+    "summary": [
+      "With Stalin pressing for a western front and Overlord's preparations complete, over 150,000 Allied troops landed across five Normandy beaches on 6 June 1944 after airborne troops secured key targets inland.",
+      "Deception operation Fortitude convinced Hitler the real invasion would hit Pas de Calais, keeping Germany's best panzer divisions away from Normandy while the beachheads, except at costly Omaha, secured quickly.",
+      "By August the Allies had trapped and shattered German forces at the Falaise Gap, liberating Paris and opening the road toward Germany's own border."
+    ]
+  },
+  {
+    "id": "battle-of-the-bulge",
+    "name": "Battle of the Bulge",
+    "dates": "December 1944 - January 1945",
+    "lat": 50.0,
+    "lng": 5.72,
+    "summary": [
+      "With Germany in retreat on every front, Hitler gambled on one last counteroffensive through the Ardennes, hoping a defeat would push America toward seeking peace terms.",
+      "German forces punched into Belgium and briefly pushed the Allies back, but overwhelming Allied troop and material superiority meant it took only about two months to retake the lost ground.",
+      "The failed offensive drained Germany's last reserves of men and armour, and the cautious Allied advance that followed left Berlin itself deliberately out of reach for now."
+    ]
+  },
+  {
+    "id": "battle-of-berlin",
+    "name": "Battle of Berlin",
+    "dates": "16 April - 2 May 1945",
+    "lat": 52.52,
+    "lng": 13.4,
+    "summary": [
+      "By early 1945 the Soviets were advancing an average of 24 kilometres a day through East Prussia, driven partly by fury at the devastation German occupation had left behind.",
+      "Soviet troops launched the final offensive on Berlin on 16 April, losing 30,000 men in three days crossing the Oder River against well-organised German defences before reaching the city itself.",
+      "Hitler committed suicide as Soviet troops closed in, and Germany's unconditional surrender, signed on 7 May 1945 and in effect from 8 May, brought the war in Europe to an end."
+    ]
+  },
+  {
+    "id": "firebombing-of-tokyo",
+    "name": "Firebombing of Tokyo (Operation Meetinghouse)",
+    "dates": "9-10 March 1945",
+    "lat": 35.68,
+    "lng": 139.69,
+    "summary": [
+      "With high-altitude precision bombing proving ineffective, the US Army Air Forces switched in March 1945 to low-level night incendiary raids, targeting Japanese factories that had been deliberately dispersed into residential areas.",
+      "A night raid dropped 1,665 tons of incendiary bombs on Tokyo, and high winds combined with the city's wood-and-paper housing to spread fires uncontrollably through densely packed neighbourhoods.",
+      "The single raid killed 100,000 people and left a million homeless, and continued firebombing killed up to 330,000 Japanese civilians before the war's end."
+    ]
+  }
 ]
