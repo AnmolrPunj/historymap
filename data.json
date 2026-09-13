@@ -166,5 +166,53 @@
             "On 4 June 1942, American dive bombers caught Japan's carriers mid-refuelling and destroyed three of its four fleet carriers within minutes; the fourth was sunk hours later.",
             "Japan permanently lost its offensive initiative in the Pacific, and its irreplaceable losses in ships, aircraft and experienced pilots marked the war's decisive turning point."
         ]
+    },
+    {
+        "id": "battle-of-stalingrad",
+        "name": "Battle of Stalingrad",
+        "dates": "July 1942 - February 1943",
+        "lat": 48.71,
+        "lng": 44.51,
+        "summary": [
+            "Hitler split his 1942 summer offensive between Stalingrad and the Caucasus oil fields, drawn to the city by its industry, its Volga supply route, and the propaganda value of capturing a city bearing Stalin's name.",
+            "Denied permission to evacuate, Stalingrad's population was mobilised into the defence as fighting collapsed into brutal house-by-house combat, until a Soviet encirclement in November 1942 trapped Germany's entire Sixth Army inside the city.",
+            "Hitler refused any breakout or surrender, and when the trapped army finally capitulated in February 1943, Germany had suffered its first major defeat of the war and lost an army it could never replace."
+        ]
+    },
+    {
+        "id": "battle-of-kursk",
+        "name": "Battle of Kursk",
+        "dates": "5 July - 23 August 1943",
+        "lat": 51.73,
+        "lng": 36.19,
+        "summary": [
+            "Still fielding over 3 million men despite Stalingrad's losses, Hitler ordered a strike at the Kursk salient, hoping to trap five Soviet armies and buy time to rebuild his depleted eastern forces.",
+            "Soviet intelligence, aided by Britain's cracked Enigma decrypts, knew the German plan in advance and built a defence in depth that turned the assault into the largest tank battle in history.",
+            "The German offensive stalled within a week, and the Soviet counterattack that followed pushed Germany permanently onto the defensive, having launched its last major offensive of the war on the Eastern Front."
+        ]
+    },
+    {
+        "id": "battle-of-el-alamein",
+        "name": "Battle of El Alamein",
+        "dates": "July - November 1942",
+        "lat": 30.83,
+        "lng": 28.95,
+        "summary": [
+            "Italy's disastrous 1940 invasion of Egypt forced Germany to send Rommel's Afrika Korps to North Africa, beginning two years of seesaw desert warfare over the Suez Canal and Middle Eastern oil.",
+            "Rommel's advance was finally checked at El Alamein, the one stretch of desert that couldn't be outflanked, and in October 1942 Montgomery's Eighth Army broke the German line after ten days of fighting.",
+            "Rommel's retreat became a rout all the way to Tunisia, and El Alamein is remembered as the moment the tide in North Africa turned decisively in the Allies' favour."
+        ]
+    },
+    {
+        "id": "operation-torch",
+        "name": "Operation Torch",
+        "dates": "8 November 1942 - 13 May 1943",
+        "lat": 36.75,
+        "lng": 3.06,
+        "summary": [
+            "With Rommel already retreating after El Alamein, the Allies opened a second North African front, landing British and American troops in French Morocco and Algeria on 8 November 1942.",
+            "Vichy French resistance collapsed into a ceasefire within days, letting Allied forces push into Tunisia, where reinforced German troops mounted a stubborn defence around Kasserine Pass.",
+            "Trapped between two advancing Allied armies, around 250,000 Axis troops surrendered in May 1943, ending the North Africa campaign and clearing the way for the invasion of Italy two months later."
+        ]
     }
 ]
