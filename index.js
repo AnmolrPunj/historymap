@@ -33,6 +33,23 @@ function initOnboarding() {
 
 initOnboarding();
 
+const topicsToggle = document.getElementById("topics-toggle");
+const topicsMenu = document.getElementById("topics-menu");
+
+topicsToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = !topicsMenu.hidden;
+    topicsMenu.hidden = isOpen;
+    topicsToggle.setAttribute("aria-expanded", String(!isOpen));
+});
+
+document.addEventListener("click", (e) => {
+    if (!topicsMenu.hidden && !topicsMenu.contains(e.target) && e.target !== topicsToggle) {
+        topicsMenu.hidden = true;
+        topicsToggle.setAttribute("aria-expanded", "false");
+    }
+});
+
 function getSize() {
     return { width: window.innerWidth, height: window.innerHeight };
 }

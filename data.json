@@ -130,5 +130,41 @@
             "Civilians endured more than two years of shelling and starvation, with rations falling as low as 125 grams of bread a day.",
             "A Soviet offensive finally broke the siege on 27 January 1944, by which point roughly 800,000 civilians had died."
         ]
+    },
+    {
+        "id": "pow-experiences",
+        "name": "The Prisoner of War Experience Under Japan",
+        "dates": "1941–1945",
+        "lat": null,
+        "lng": null,
+        "summary": [
+            "Japan signed but never ratified the 1929 Geneva Convention, and its military culture treated surrender as shameful, leaving captured troops with no legal or cultural protection.",
+            "Roughly 180,000 Allied POWs and vastly more Asian forced labourers passed through Japanese captivity, used predominantly as labour on projects like the Thai-Burma Railway.",
+            "About 27% of Allied POWs held by Japan died in captivity, compared to 3.6% under Germany and Italy, one of the starkest disparities of the entire war."
+        ]
+    },
+    {
+        "id": "battle-of-coral-sea",
+        "name": "Battle of the Coral Sea",
+        "dates": "4-8 May 1942",
+        "lat": -15.0,
+        "lng": 155.0,
+        "summary": [
+            "Japan launched Operation MO to invade Port Moresby and the Solomon Islands, aiming to cut supply routes between Australia and the US and secure its new defensive perimeter.",
+            "Having broken Japan's naval code, the US intercepted the invasion force for history's first carrier battle fought entirely by aircraft, with the opposing ships never sighting each other.",
+            "Japan sank more tonnage and lost only the carrier Shoho, but the Port Moresby invasion was turned back and two more Japanese carriers were left unavailable for Midway a month later."
+        ]
+    },
+    {
+        "id": "battle-of-midway",
+        "name": "Battle of Midway",
+        "dates": "4-7 June 1942",
+        "lat": 28.2,
+        "lng": -177.35,
+        "summary": [
+            "Yamamoto planned to lure and destroy America's remaining carriers at Midway, but American codebreakers had already identified the target and prepared an ambush.",
+            "On 4 June 1942, American dive bombers caught Japan's carriers mid-refuelling and destroyed three of its four fleet carriers within minutes; the fourth was sunk hours later.",
+            "Japan permanently lost its offensive initiative in the Pacific, and its irreplaceable losses in ships, aircraft and experienced pilots marked the war's decisive turning point."
+        ]
     }
 ]

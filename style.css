@@ -106,6 +106,54 @@ html {
     stroke-linejoin: round;
 }
 
+#topics-nav {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 15;
+    font-family: Georgia, serif;
+}
+
+#topics-toggle {
+    background: #e8e2d0;
+    color: #1a1a16;
+    border: none;
+    padding: 8px 16px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#topics-toggle:hover {
+    background: #ded7c2;
+}
+
+#topics-menu {
+    margin-top: 6px;
+    background: #e8e2d0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    overflow: hidden;
+    min-width: 200px;
+}
+
+#topics-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #1a1a16;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(26,26,22,0.1);
+}
+
+#topics-menu a:last-child {
+    border-bottom: none;
+}
+
+#topics-menu a:hover {
+    background: #ded7c2;
+}
+
 #tooltip {
     position: fixed;
     display: none;
