@@ -133,6 +133,19 @@ html {
     margin-bottom: 6px;
 }
 
+#tt-summary {
+    margin: 0 0 4px;
+    padding-left: 16px;
+}
+
+#tt-summary li {
+    margin-bottom: 3px;
+}
+
+#tt-summary li:last-child {
+    margin-bottom: 0;
+}
+
 #tt-close {
     float: right;
     cursor: pointer;
